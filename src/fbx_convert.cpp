@@ -80,8 +80,8 @@ void PrintNode(bone *actual, FbxNode* pNode, int lastlevel)
     //actual->mat = &modelmat[actual->index];
     
     int level = lastlevel +1;
-//    cout << "bonename: " <<  pNode->GetName() << endl;
-//    cout << "bone level: " << level << endl;
+    cout << "bonename: " <<  pNode->GetName() << endl;
+    cout << "bone level: " << level << endl;
     
     actual->name = pNode->GetName();
     
@@ -91,7 +91,7 @@ void PrintNode(bone *actual, FbxNode* pNode, int lastlevel)
     t1 = bone_vector[0];
     t2 = bone_vector[1];
     t3= bone_vector[2];
-//    cout << "bone vector (x,y,z): " << t1 << ", " << t2 << ", " << t3 << endl;
+    cout << "bone vector (x,y,z): " << t1 << ", " << t2 << ", " << t3 << endl;
     actual->pos.x = t1;
     actual->pos.y = t2;
     actual->pos.z = t3;
@@ -112,7 +112,7 @@ void PrintNode(bone *actual, FbxNode* pNode, int lastlevel)
     u2 = (sin(e2*PIe / 180)*sin(e3*PIe / 180) - cos(e2*PIe / 180)*sin(e1*PIe / 180)*cos(e3*PIe / 180) - sin(e1*PIe / 180)) / sqrt(cos(e2*PIe / 180)*cos(e1*PIe / 180) + cos(e2*PIe / 180)*cos(e3*PIe / 180) - sin(e2*PIe / 180)*sin(e1*PIe / 180)*sin(e3*PIe / 180) + cos(e1*PIe / 180)*cos(e3*PIe / 180) + 1) / 2;
     u3 = (sin(e2*PIe / 180)*cos(e1*PIe / 180) + sin(e2*PIe / 180)*cos(e3*PIe / 180) + cos(e2*PIe / 180)*sin(e1*PIe / 180)*sin(e3*PIe / 180)) / sqrt(cos(e2*PIe / 180)* cos(e1*PIe / 180) + cos(e2*PIe / 180)*cos(e3*PIe / 180) - sin(e2*PIe / 180)*sin(e1*PIe / 180)*sin(e3*PIe / 180) + cos(e1*PIe / 180)*cos(e3*PIe / 180) + 1) / 2;
     
-//    cout << "bone quaternion (i,j,k,re): " << u1 << ", " << u2 << ", " << u3 << ", " << u0 << endl;
+    cout << "bone quaternion (i,j,k,re): " << u1 << ", " << u2 << ", " << u3 << ", " << u0 << endl;
     actual->q.x = u1;
     actual->q.y = u2;
     actual->q.z = u3;
@@ -120,19 +120,19 @@ void PrintNode(bone *actual, FbxNode* pNode, int lastlevel)
     
     
     
-//    int child_count = pNode->GetChildCount();
-//    cout << "bone children count: " << child_count << endl;
-//    cout << "bone children names:" << endl;
-//    for (int j = 0; j < pNode->GetChildCount(); j++)
-//    {
-//
-//        cout << "\t" << pNode->GetChild(j)->GetName() << endl;
-//    }
+    int child_count = pNode->GetChildCount();
+    cout << "bone children count: " << child_count << endl;
+    cout << "bone children names:" << endl;
+    for (int j = 0; j < pNode->GetChildCount(); j++)
+    {
+
+        cout << "\t" << pNode->GetChild(j)->GetName() << endl;
+    }
     
-    //for (int i = 0; i < pNode->GetNodeAttributeCount(); i++)
-    //    PrintAttribute(file,pNode->GetNodeAttributeByIndex(i));
+//    for (int i = 0; i < pNode->GetNodeAttributeCount(); i++)
+//        PrintAttribute(file,pNode->GetNodeAttributeByIndex(i));
     
-    // Recursively print the children.
+//     Recursively print the children.
     for (int j = 0; j < pNode->GetChildCount(); j++)
     {
         bone *k = new bone;
@@ -173,7 +173,7 @@ void CalcTransRotAnim(all_animations *all_animation, FbxScene* lScene, FbxNode* 
     int keyframecount = end.GetFrameCount(FbxTime::eFrames24) - start.GetFrameCount(FbxTime::eFrames24) + 1;
     
     const char* nodeName = lNode->GetName();
-    //    cout << endl << "\t" << "bone name: " << nodeName << endl << endl;
+        cout << endl << "\t" << "bone name: " << nodeName << endl << endl;
     
     animation_per_bone anim;
     anim.bone = nodeName;
@@ -783,10 +783,10 @@ int readtobone(string file, all_animations *all_animation,bone **proot)
     for (int i = 0; i < child_count; i++)//nur einen knochen machen
         CountBones(lRootNode->GetChild(i),count_bones);
     
-//    cout << endl;
-//    cout << "Skeleton" << endl;
-//    cout << endl;
-//    cout << "count bones: " << count_bones << endl;
+    cout << endl;
+    cout << "Skeleton" << endl;
+    cout << endl;
+    cout << "count bones: " << count_bones << endl;
     
     
     bone *root = new bone;
