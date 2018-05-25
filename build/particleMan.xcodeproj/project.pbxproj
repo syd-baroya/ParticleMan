@@ -7,48 +7,48 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		55A07831168041F49122857C /* install */ = {
+		0A0085227068440EA67D151B /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 98FB1379CCFE45EEBEA865E7 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildConfigurationList = E25731BB5584417897FAFA97 /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
-				8F8F2944BF7B4FDCBF7D9D45 /* CMake PostBuild Rules */,
+				01FDF996CA704E96A9894C3A /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				478E3F61B4EA4F88A1FB77D8 /* PBXTargetDependency */,
+				B6C2F306A85D48A0ADA981BB /* PBXTargetDependency */,
 			);
 			name = install;
 			productName = install;
 		};
-		77837F97C0B547ACA1ED0898 /* ALL_BUILD */ = {
+		42DE1626AF9A4D53B0129649 /* uninstall */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 79D3A59BA870455A811A3F4E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 317993416A684791A01DE576 /* Build configuration list for PBXAggregateTarget "uninstall" */;
 			buildPhases = (
-				1CFC9E2C8C8F4F46BD720978 /* CMake Rules */,
-			);
-			dependencies = (
-				E556BD1AE7DF4C33BFC25E21 /* PBXTargetDependency */,
-				8CD978E201564871BEF476FB /* PBXTargetDependency */,
-				4488B9777D4B4DCF838160F6 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
-		D3982EB66B2A420B9CC6251E /* uninstall */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 0BAD73A5A22D43108967E0C2 /* Build configuration list for PBXAggregateTarget "uninstall" */;
-			buildPhases = (
-				4D566AADA26D472CA19F0279 /* CMake Rules */,
+				56ADFC2A1EF2450C8E714E24 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = uninstall;
 			productName = uninstall;
 		};
-		EA7E5716ED534D609D67EE74 /* ZERO_CHECK */ = {
+		6913566AD5874DD7946F012D /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = B352E9FBEBCF4A2088C256A0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = D1FEE7FAC8C4458DBB6C58FE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				308AFFA4155F478BAB71337E /* CMake Rules */,
+				5A6A1E29945C455DB920FEE8 /* CMake Rules */,
+			);
+			dependencies = (
+				4C67A6A7F0804CAE9C3E5D96 /* PBXTargetDependency */,
+				1D3B291C40224912B406F092 /* PBXTargetDependency */,
+				D8D4CACE5AC54552AA85A89C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		D92A01736F51422589676ECD /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1A1A32A68724461C97E4034E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				8FE8FA36E3CC4724A8CED8DE /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -58,466 +58,421 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0EEE4B0224A847A4A1119BEF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXBuildFile; fileRef = 7F7C6EFC26324AE6BB089698 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */; };
-		14CAC8948AA34210BC88731F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = 7EFDE45DE4DA4BAB9194AB05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */; };
-		1FB119996E614D7EB4FB7128 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXBuildFile; fileRef = 093162CF824741DCB8860821 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */; };
-		1FEB612F6ADA45D0AE18E68C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */ = {isa = PBXBuildFile; fileRef = ED272EFBFCD94CB095F5E8F3 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */; };
-		2002BDFB75974540845A8AE3 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = BF48F8D238C64BE587FD58A7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */; };
-		220AC9D0971944D29E377A97 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 0C56D9A08B3B4DDC9E987623 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c */; };
-		2CE3A84D2EFD4AB883B99BB9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/context.c */ = {isa = PBXBuildFile; fileRef = 79A4269D4F904096A7820E3C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/context.c */; };
-		2DE7D6F41DF940D89326A869 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 644AB27C10034BA7A6C3303D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c */; };
-		30F199B3496740E5AB03E41E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */ = {isa = PBXBuildFile; fileRef = 96E2A4B25C6641B1A61E1E63 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */; };
-		3ED3AE36E98A4B7CAA5BD81D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 29CB257A5C374B30886EC0C8 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m */; };
-		520AAC737EB944D4BE5A962D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */ = {isa = PBXBuildFile; fileRef = B83CE06F3D924FC0B925D0E9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */; };
-		61F7B41274C1423DABF28063 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 979BEEAF641C4221A308831B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_platform.h */; };
-		64F292D523BB40BC871AB657 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 90082B2183C8406C95D8D325 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/CMakeLists.txt */; };
-		678259181E4C473F888435B3 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */ = {isa = PBXBuildFile; fileRef = 0E0F722A615649D3A4E20A39 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */; };
-		6F04684E2D9C48988015C910 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 6C0058D8B7F948BDBD9B4A56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/glfw_config.h */; };
-		77B45BF70A57473B908EEBF9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 54F85E7C838A46BA8DFF11E7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */; };
-		7838D509FFFC4FC2BBDD089C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = DE9E3EB956AD4D3BAEC50EE9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3.h */; };
-		83E3413D856449E9B16340B4 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 1CE508C49BFA455CAAFC8AB1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m */; };
-		8576BE19D2F84522AC583DD5 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */ = {isa = PBXBuildFile; fileRef = C75DE26A18DA4B4DBADD982A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */; };
-		980BF15CB49A4298B7DA663B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */ = {isa = PBXBuildFile; fileRef = 8286B2450BA7438FA19C3464 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */; };
-		A441DEA37C9C4CC98869ED53 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */ = {isa = PBXBuildFile; fileRef = 3DA049AC3D70411DAFFFC968 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */; };
-		A5217C7161AC40748C7DBC7C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = CF18E5F76D1A4DFE8CCF00F6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.h */; };
-		AAD25333FBDA4A5EB636FC93 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 5CCF9A4F382B432EA77198E1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m */; };
-		AE33F7A8F29C474F9A00716D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 488D065142F64CDFAF25125B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/vulkan.c */; };
-		BAF5A176B69D424B987EF9E5 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 0F76935B21E14834B323CD6E /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3native.h */; };
-		BC064D7A5E844C30BA35904A /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 7604BFC1F1804B9B8065E6C9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m */; };
-		C70D0E4DE7D44C05B05E1474 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = CCC5E61A76094498BB8FAABF /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.h */; };
-		C7654ABC5B2D43BCB6FB5C67 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXBuildFile; fileRef = 9E89C906946E4C61BA27E19A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */; };
-		CDDA503F57B8464983760B5F /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/internal.h */ = {isa = PBXBuildFile; fileRef = 36C06C25FFEE439089E337C6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/internal.h */; };
-		D34C43A3D34643AAB35F7E5E /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/init.c */ = {isa = PBXBuildFile; fileRef = D1BD651AFD3E4C2AA7527419 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/init.c */; };
-		D38C0CE25B644146A4E33D6C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/monitor.c */ = {isa = PBXBuildFile; fileRef = CD3FA78BAA934E3DBFF8FD50 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/monitor.c */; };
-		D7A23FD8F84A407DBF5319D8 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/input.c */ = {isa = PBXBuildFile; fileRef = 28BD7E538C8C437B87E6A450 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/input.c */; };
-		D98A1A5F76B1412FB74B4DFA /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */ = {isa = PBXBuildFile; fileRef = 40F0DD6AB724495BBF5DAD80 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */; };
-		DEC898E8BEA547FC89C506F5 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = F73BE22251D1428C9091B1B3 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.h */; };
-		E192077A970C4CD0B32610BE /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 108BE848156A45388D9DED56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m */; };
-		E8D82A0B2F004890A1B26649 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */ = {isa = PBXBuildFile; fileRef = B3AA2EAE71DF41EC9C5C8A16 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */; };
-		EBF32EFDE7B64D6D865C1761 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */ = {isa = PBXBuildFile; fileRef = 928F4D0B90AE4DC0A8E2829E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */; };
-		ECDAD1FF225945A48CFAF433 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */ = {isa = PBXBuildFile; fileRef = BCEDA5931519417EB9349881 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */; };
-		F38EADE2A98345CC9CE58F73 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */ = {isa = PBXBuildFile; fileRef = 3A4BACF8F8DB4CE6BE627B98 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */; };
-		F793892768284F7D9058B73C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */ = {isa = PBXBuildFile; fileRef = 45E42F1521EE44A2811D16A1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */; };
-		FEBC9788E27B4A35862DF4FE /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/window.c */ = {isa = PBXBuildFile; fileRef = CA617012652044B0A372B5A5 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/window.c */; };
+		02D7BC0D1A4F490BAD9E412C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 557AD3A5595A4D83B5B39506 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */; };
+		0785052E035E4C9D865E50A3 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 84563DE9EA3443768691EC76 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */; };
+		0BCA2F1875B44C88B9351A16 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 6133073051574C2A9695A827 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */; };
+		0FB5CC02CBB243A19A349364 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/fbx_convert.cpp */ = {isa = PBXBuildFile; fileRef = 0B89BD2AA954418F854282FA /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/fbx_convert.cpp */; };
+		21C0FC20A0B34437A7F5A22B /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/bone.h */ = {isa = PBXBuildFile; fileRef = 4295306F1B2048B59488B58C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/bone.h */; };
+		251E99EBADBF4A929020874D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXBuildFile; fileRef = B9172FAE14134CCC93D801FC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/KHR/khrplatform.h */; };
+		2654890250724B4F90C6FA1C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.h */ = {isa = PBXBuildFile; fileRef = EB33A909A8ED43CF9CB356C9 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.h */; };
+		28F7013E94AF4F2A9B12322D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 07DB6F1B8BB34AFCAF0630C6 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */; };
+		3959291CDF584CC8B2B6655F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/main.cpp */ = {isa = PBXBuildFile; fileRef = D6725AD85A94436C9795C1FB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/main.cpp */; };
+		3AFEB3D82935499EB39254EC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.h */ = {isa = PBXBuildFile; fileRef = 07E7D14313284EDBBBF566D4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.h */; };
+		3DB537521FE84D5FAF9A7BDC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.h */ = {isa = PBXBuildFile; fileRef = 09C4131A4F2347F39B09E23F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.h */; };
+		3FC6831CC8F845DE827CD479 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */ = {isa = PBXBuildFile; fileRef = 60D491081B89470F9F3CB85E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */; };
+		46F3862E85584988815B5E74 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.cpp */ = {isa = PBXBuildFile; fileRef = 13C003A8FD9C4DD691584895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.cpp */; };
+		48141E4B73EB4649A6EA7B36 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/window.c */ = {isa = PBXBuildFile; fileRef = ACFC3261D5AF4A4E876E806D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/window.c */; };
+		4D4C2703E5454EE589F34487 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/stb_image.h */ = {isa = PBXBuildFile; fileRef = 099E568FA1D441B0A5C5D8F2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/stb_image.h */; };
+		4EA71F7241E941BFA89BBCCD /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 671160A610B345B9A07DCB54 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */; };
+		58AF8D1DAAF644439CC64434 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 724AFE885B2D4C56BA8FAA2F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */; };
+		5E1E57A124A744A39ECF0F57 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.cpp */ = {isa = PBXBuildFile; fileRef = D9326EACFFF147EB8052647C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.cpp */; };
+		6126D73BB9E04C53A3EA9BC2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 616B891D969843A8ABC78D50 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */; };
+		634DD1F058C4462BAE15CB4E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 942C83760ADC4EFB97742835 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */; };
+		6356E5F953B34562B1F13E73 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.cpp */ = {isa = PBXBuildFile; fileRef = AACA1607A7914E6188D409D2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.cpp */; };
+		7096726960F8414CBD01C21A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 1C52545C1B344FF2883DA4F4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */; };
+		7EE0F345A96B4F58AF3D6983 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 5BDC7B61D7BA4AFD82D90E74 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */; };
+		7F2A177A131740259D8ACD80 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 9408ECF4E6954A2B8FCE9708 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */; };
+		875D0479F6A44103867E72CF /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.frag */ = {isa = PBXBuildFile; fileRef = 828778E31ACD4F7DA38B8957 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.frag */; };
+		8DA9E4BA507E4E558F20D919 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXBuildFile; fileRef = 8AAC42A6E91E488A9E5A9895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/tiny_obj_loader.h */; };
+		921E2A2BCFC04EC28A4E5E7C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = 5526739B6A73401F933687C4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/src/glad.c */; };
+		95C2E05799A3431AB67476D4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.h */ = {isa = PBXBuildFile; fileRef = 4CF84A8703814A45BE434E9C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.h */; };
+		9DBED9C1A17E46F08D4F5764 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.h */ = {isa = PBXBuildFile; fileRef = 2360A350B10A41BFBEBAE5D7 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.h */; };
+		A17D5274D0784EF1B34F388C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 6354CEA9DAE747C6B6F05E45 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */; };
+		A192B64A81CF4E029A9363EC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 5BD5A4AD508F483985861615 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */; };
+		B7C0C3172B2F40678B4B74B9 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = B6B2324B44A34847A1A3E03F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */; };
+		C1C5648C5CB34C46AA380B3C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXBuildFile; fileRef = 2FBA43FDB9C34656A9302FB2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/glad/glad.h */; };
+		D164E2DCC7E644619C070CFE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/input.c */ = {isa = PBXBuildFile; fileRef = CB2A5652F2CE4F6CA3D6EB9A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/input.c */; };
+		D8BF6BA8182B40A8AA7CD654 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 56457DB92F7A4ED283B674EE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */; };
+		D8D279F1D48D4AC49DDD1C0E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.cpp */ = {isa = PBXBuildFile; fileRef = F6F2636F90DB490CA462DB46 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.cpp */; };
+		E23BDD7F353A4BC2B306C062 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.cpp */ = {isa = PBXBuildFile; fileRef = 2C23E81B31F146B1821F982A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.cpp */; };
+		E3517A884E32466AB2DA3148 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/init.c */ = {isa = PBXBuildFile; fileRef = 5F5CF40952164BA8A55B7969 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/init.c */; };
+		E496E2918723452FB873E23E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = B1AA789C048C43FCB44C3FAB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */; };
+		EB4795DAAF394BFA96C0D95C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 304A4311FFDE43CA9F28F61A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */; };
+		EF1788ADF881492E8BBE5D44 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 9823EEEEE2B24CA085F291FE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */; };
+		F0DE61A1A5DA481BACAEC6B6 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 71D909DCAF884E6FB71E4F33 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */; };
+		F3120A3335EE470982FEFE60 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 66784D0B587144F5A4ECD153 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */; };
+		F368720591594D71A852E23B /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = B6497490E6314AE9A1910740 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */; };
+		F5E88DDAD9FF4AFF92E42D3A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.vert */ = {isa = PBXBuildFile; fileRef = 7E22BFA9CA8C4E9890AEF75A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.vert */; };
+		F67AF1B138AF44A9AB7A8A6C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 945B7BCA1F24437C93660EFC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */; };
+		FDA1374D247B4EE29AB03CD4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AD90AE3300FB4495A5057750 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */; };
+		FEA02C57A34D45D691B5D29D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/context.c */ = {isa = PBXBuildFile; fileRef = 37503D75FD7C4ABBA2984149 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/context.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		4D655A62F6954A33BA1A81B3 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		590F4DD9BEAF44EEAB0C8DB4 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		6A9D90442C9845EDA46550C4 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		EAE03A4BEA8D42C48F71C99B /* Debug */ = {
+		046EDFA6F8E24E609C47FDD8 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
+		062AB8F40CD14713978C99AB /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		D8C7D44B59C8415A821BDB9C /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		F361377E760E4278BA3673D4 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		11C9726263774F55884F1D86 /* PBXContainerItemProxy */ = {
+		05CEECEEE1D244C0AE2C0CC7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 77837F97C0B547ACA1ED0898;
+			remoteGlobalIDString = 91CF5CA17BAB417B99A2CB9B;
+			remoteInfo = glfw;
+		};
+		14D0266BDE474CC3897B4B13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6913566AD5874DD7946F012D;
 			remoteInfo = ALL_BUILD;
 		};
-		1379E224B3F34EF0B48657CC /* PBXContainerItemProxy */ = {
+		5F210CE90582429FB900D917 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 256965BBAA6D4109822DCC5D;
-			remoteInfo = glfw;
+			remoteGlobalIDString = D92A01736F51422589676ECD;
+			remoteInfo = ZERO_CHECK;
 		};
-		2AC9EDF2DE1C4710B195686E /* PBXContainerItemProxy */ = {
+		81141F9669A74D9183B0E73C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 399432E4E544491D98F32507;
+			remoteGlobalIDString = D92A01736F51422589676ECD;
+			remoteInfo = ZERO_CHECK;
+		};
+		A184FE3ADA9C475C9E0CEE2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A903D66CD3284B50A779BF09;
 			remoteInfo = particleMan;
 		};
-		68FE1704F8054D3F8B85C49A /* PBXContainerItemProxy */ = {
+		A61FBD90276047F696EE7598 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA7E5716ED534D609D67EE74;
+			remoteGlobalIDString = D92A01736F51422589676ECD;
 			remoteInfo = ZERO_CHECK;
 		};
-		B50CF966440543F8B2C70F40 /* PBXContainerItemProxy */ = {
+		FD312E345785466AA734D457 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
+			containerPortal = 54EEB4540942429FB495FA80 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 256965BBAA6D4109822DCC5D;
+			remoteGlobalIDString = 91CF5CA17BAB417B99A2CB9B;
 			remoteInfo = glfw;
-		};
-		F561C6177BCB4296AB4D150C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7E5716ED534D609D67EE74;
-			remoteInfo = ZERO_CHECK;
-		};
-		F590C8D0F3994673B3407FEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD1514507FB24CA395DB435D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA7E5716ED534D609D67EE74;
-			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		085FDE56DFBC44F680819B76 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		093162CF824741DCB8860821 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = khrplatform.h; path = ext/glad/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
-		0C56D9A08B3B4DDC9E987623 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
-		0E0F722A615649D3A4E20A39 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Program.h; path = src/Program.h; sourceTree = SOURCE_ROOT; };
-		0F76935B21E14834B323CD6E /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "../../Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
-		108BE848156A45388D9DED56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "../../Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
-		1CE508C49BFA455CAAFC8AB1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
-		28BD7E538C8C437B87E6A450 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/input.c"; sourceTree = SOURCE_ROOT; };
-		29CB257A5C374B30886EC0C8 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
-		36C06C25FFEE439089E337C6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "../../Collections/Software Downloads/glfw-3.2.1/src/internal.h"; sourceTree = SOURCE_ROOT; };
-		3A4BACF8F8DB4CE6BE627B98 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Shape.h; path = src/Shape.h; sourceTree = SOURCE_ROOT; };
-		3DA049AC3D70411DAFFFC968 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Shape.cpp; path = src/Shape.cpp; sourceTree = SOURCE_ROOT; };
-		40F0DD6AB724495BBF5DAD80 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WindowManager.cpp; path = src/WindowManager.cpp; sourceTree = SOURCE_ROOT; };
-		45E42F1521EE44A2811D16A1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GLSL.cpp; path = src/GLSL.cpp; sourceTree = SOURCE_ROOT; };
-		488D065142F64CDFAF25125B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
-		54F85E7C838A46BA8DFF11E7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		5CCF9A4F382B432EA77198E1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
-		644AB27C10034BA7A6C3303D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c"; sourceTree = SOURCE_ROOT; };
-		6C0058D8B7F948BDBD9B4A56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "../../Collections/Software Downloads/glfw-3.2.1/debug/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
-		7504B23BE4464772A254B532 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		7604BFC1F1804B9B8065E6C9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
-		79A4269D4F904096A7820E3C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/context.c"; sourceTree = SOURCE_ROOT; };
-		7EFDE45DE4DA4BAB9194AB05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ext/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
-		7F7C6EFC26324AE6BB089698 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tiny_obj_loader.h; path = src/tiny_obj_loader.h; sourceTree = SOURCE_ROOT; };
-		8286B2450BA7438FA19C3464 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Program.cpp; path = src/Program.cpp; sourceTree = SOURCE_ROOT; };
-		90082B2183C8406C95D8D325 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "../../Collections/Software Downloads/glfw-3.2.1/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-		928F4D0B90AE4DC0A8E2829E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GLSL.h; path = src/GLSL.h; sourceTree = SOURCE_ROOT; };
-		96E2A4B25C6641B1A61E1E63 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WindowManager.h; path = src/WindowManager.h; sourceTree = SOURCE_ROOT; };
-		979BEEAF641C4221A308831B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
-		9E89C906946E4C61BA27E19A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = ext/glad/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
-		B3AA2EAE71DF41EC9C5C8A16 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Camera.h; path = src/Camera.h; sourceTree = SOURCE_ROOT; };
-		B83CE06F3D924FC0B925D0E9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fbx_convert.cpp; path = src/fbx_convert.cpp; sourceTree = SOURCE_ROOT; };
-		BCEDA5931519417EB9349881 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stb_image.h; path = src/stb_image.h; sourceTree = SOURCE_ROOT; };
-		BD26A52D0D4B4B15A8D008B2 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "../../Collections/Software Downloads/glfw-3.2.1/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-		BF48F8D238C64BE587FD58A7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		C4F7F1888EF7454883665854 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C75DE26A18DA4B4DBADD982A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bone.h; path = src/bone.h; sourceTree = SOURCE_ROOT; };
-		CA617012652044B0A372B5A5 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/window.c"; sourceTree = SOURCE_ROOT; };
-		CCC5E61A76094498BB8FAABF /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "../../Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
-		CD3FA78BAA934E3DBFF8FD50 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/monitor.c"; sourceTree = SOURCE_ROOT; };
-		CF18E5F76D1A4DFE8CCF00F6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = "../../Collections/Software Downloads/glfw-3.2.1/src/posix_tls.h"; sourceTree = SOURCE_ROOT; };
-		D1BD651AFD3E4C2AA7527419 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "../../Collections/Software Downloads/glfw-3.2.1/src/init.c"; sourceTree = SOURCE_ROOT; };
-		DE9E3EB956AD4D3BAEC50EE9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "../../Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
-		ED272EFBFCD94CB095F5E8F3 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Camera.cpp; path = src/Camera.cpp; sourceTree = SOURCE_ROOT; };
-		F00EE59406BE4118B984EC95 /* particleMan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = particleMan; sourceTree = BUILT_PRODUCTS_DIR; };
-		F73BE22251D1428C9091B1B3 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "../../Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+		07DB6F1B8BB34AFCAF0630C6 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "ext/glfw-3.3-prerelease/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+		07E7D14313284EDBBBF566D4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GLSL.h; path = src/GLSL.h; sourceTree = SOURCE_ROOT; };
+		099E568FA1D441B0A5C5D8F2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/stb_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stb_image.h; path = src/stb_image.h; sourceTree = SOURCE_ROOT; };
+		09C4131A4F2347F39B09E23F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Program.h; path = src/Program.h; sourceTree = SOURCE_ROOT; };
+		0B89BD2AA954418F854282FA /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/fbx_convert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fbx_convert.cpp; path = src/fbx_convert.cpp; sourceTree = SOURCE_ROOT; };
+		13C003A8FD9C4DD691584895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Shape.cpp; path = src/Shape.cpp; sourceTree = SOURCE_ROOT; };
+		1C52545C1B344FF2883DA4F4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
+		2360A350B10A41BFBEBAE5D7 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Camera.h; path = src/Camera.h; sourceTree = SOURCE_ROOT; };
+		2C23E81B31F146B1821F982A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WindowManager.cpp; path = src/WindowManager.cpp; sourceTree = SOURCE_ROOT; };
+		2FBA43FDB9C34656A9302FB2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = ext/glad/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
+		304A4311FFDE43CA9F28F61A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = "ext/glfw-3.3-prerelease/src/osmesa_context.h"; sourceTree = SOURCE_ROOT; };
+		37503D75FD7C4ABBA2984149 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "ext/glfw-3.3-prerelease/src/context.c"; sourceTree = SOURCE_ROOT; };
+		4295306F1B2048B59488B58C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/bone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bone.h; path = src/bone.h; sourceTree = SOURCE_ROOT; };
+		4CF84A8703814A45BE434E9C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Shape.h; path = src/Shape.h; sourceTree = SOURCE_ROOT; };
+		5526739B6A73401F933687C4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ext/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		552814BD22EB4521AABBFDF0 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		557AD3A5595A4D83B5B39506 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "ext/glfw-3.3-prerelease/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+		56457DB92F7A4ED283B674EE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = "ext/glfw-3.3-prerelease/src/posix_thread.c"; sourceTree = SOURCE_ROOT; };
+		5BD5A4AD508F483985861615 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "ext/glfw-3.3-prerelease/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
+		5BDC7B61D7BA4AFD82D90E74 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "ext/glfw-3.3-prerelease/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+		5E3F9E88105440A39EA60624 /* particleMan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = particleMan; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5CF40952164BA8A55B7969 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "ext/glfw-3.3-prerelease/src/init.c"; sourceTree = SOURCE_ROOT; };
+		60D491081B89470F9F3CB85E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "ext/glfw-3.3-prerelease/src/internal.h"; sourceTree = SOURCE_ROOT; };
+		6133073051574C2A9695A827 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "ext/glfw-3.3-prerelease/src/monitor.c"; sourceTree = SOURCE_ROOT; };
+		616B891D969843A8ABC78D50 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		6354CEA9DAE747C6B6F05E45 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "ext/glfw-3.3-prerelease/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+		66784D0B587144F5A4ECD153 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+		671160A610B345B9A07DCB54 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+		71D909DCAF884E6FB71E4F33 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = "ext/glfw-3.3-prerelease/src/posix_thread.h"; sourceTree = SOURCE_ROOT; };
+		724AFE885B2D4C56BA8FAA2F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = "ext/glfw-3.3-prerelease/src/mappings.h"; sourceTree = SOURCE_ROOT; };
+		7E22BFA9CA8C4E9890AEF75A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.vert; path = resources/skeleton.vert; sourceTree = SOURCE_ROOT; };
+		828778E31ACD4F7DA38B8957 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.frag; path = resources/skeleton.frag; sourceTree = SOURCE_ROOT; };
+		84563DE9EA3443768691EC76 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "ext/glfw-3.3-prerelease/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+		8AAC42A6E91E488A9E5A9895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tiny_obj_loader.h; path = src/tiny_obj_loader.h; sourceTree = SOURCE_ROOT; };
+		9408ECF4E6954A2B8FCE9708 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+		942C83760ADC4EFB97742835 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "ext/glfw-3.3-prerelease/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+		945B7BCA1F24437C93660EFC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "ext/glfw-3.3-prerelease/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
+		95BC00131C3E4552ADCCADF4 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9823EEEEE2B24CA085F291FE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+		AACA1607A7914E6188D409D2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Camera.cpp; path = src/Camera.cpp; sourceTree = SOURCE_ROOT; };
+		ACFC3261D5AF4A4E876E806D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "ext/glfw-3.3-prerelease/src/window.c"; sourceTree = SOURCE_ROOT; };
+		AD90AE3300FB4495A5057750 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B1AA789C048C43FCB44C3FAB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = "ext/glfw-3.3-prerelease/src/egl_context.c"; sourceTree = SOURCE_ROOT; };
+		B6497490E6314AE9A1910740 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = "ext/glfw-3.3-prerelease/src/egl_context.h"; sourceTree = SOURCE_ROOT; };
+		B6B2324B44A34847A1A3E03F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = "ext/glfw-3.3-prerelease/src/osmesa_context.c"; sourceTree = SOURCE_ROOT; };
+		B9172FAE14134CCC93D801FC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = khrplatform.h; path = ext/glad/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
+		CB2A5652F2CE4F6CA3D6EB9A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "ext/glfw-3.3-prerelease/src/input.c"; sourceTree = SOURCE_ROOT; };
+		D6725AD85A94436C9795C1FB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		D9326EACFFF147EB8052647C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Program.cpp; path = src/Program.cpp; sourceTree = SOURCE_ROOT; };
+		DBC5EA9FCB6F4337B19B470F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		EB33A909A8ED43CF9CB356C9 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WindowManager.h; path = src/WindowManager.h; sourceTree = SOURCE_ROOT; };
+		F6F2636F90DB490CA462DB46 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GLSL.cpp; path = src/GLSL.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		17B5874CA8C44B388C50C3CC /* GLFW3 */ = {
-			isa = PBXGroup;
-			children = (
-				2CF05D259AA34C6DB1D8F2BE /* glfw */,
-			);
-			name = GLFW3;
-			sourceTree = "<group>";
-		};
-		298794D991BB4DB3A431896E /* CMake Rules */ = {
+		03CD925F58024A8C993A6F28 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		2CF05D259AA34C6DB1D8F2BE /* glfw */ = {
+		05ADE9AEFA1A4EDA845AC8E4 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				8692B42D6EE6408EA9D9D41F /* Source Files */,
-				9BFDFE4DBB904188BE2C53B9 /* Header Files */,
-				90082B2183C8406C95D8D325 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/CMakeLists.txt */,
-			);
-			name = glfw;
-			sourceTree = "<group>";
-		};
-		3E4BBA2D005646DE83A5608F /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		6E8A393576464EB5A7E2683A /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				E1081E8DFBDF4FED9B1AC35D /* CMake Rules */,
-				7504B23BE4464772A254B532 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */,
+				03CD925F58024A8C993A6F28 /* CMake Rules */,
+				DBC5EA9FCB6F4337B19B470F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		778B67F505714295A37D7A2A /* Source Files */ = {
+		34A06F8166C2449EA9E9A752 = {
 			isa = PBXGroup;
 			children = (
-				7EFDE45DE4DA4BAB9194AB05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */,
-				ED272EFBFCD94CB095F5E8F3 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */,
-				45E42F1521EE44A2811D16A1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */,
-				8286B2450BA7438FA19C3464 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */,
-				3DA049AC3D70411DAFFFC968 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */,
-				40F0DD6AB724495BBF5DAD80 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */,
-				B83CE06F3D924FC0B925D0E9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */,
-				54F85E7C838A46BA8DFF11E7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		78B6443886E64D7BB1160FDC = {
-			isa = PBXGroup;
-			children = (
-				9F6E1188100E4697B91D489D /* particleMan */,
-				6E8A393576464EB5A7E2683A /* ALL_BUILD */,
-				C490A988225A45D49CF466AC /* ZERO_CHECK */,
-				7B3A6EB39A1D45508A51D299 /* uninstall */,
-				17B5874CA8C44B388C50C3CC /* GLFW3 */,
-				924BB644C0184CB49EDB7B0E /* Products */,
+				807CEBDB966C4DCB9E52C3DC /* particleMan */,
+				05ADE9AEFA1A4EDA845AC8E4 /* ALL_BUILD */,
+				546EC61749C4452E9C2A5456 /* GLFW3 */,
+				4A41EFA6DACD4589BAB4279A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7B3A6EB39A1D45508A51D299 /* uninstall */ = {
+		4A41EFA6DACD4589BAB4279A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E4BBA2D005646DE83A5608F /* CMake Rules */,
-				BD26A52D0D4B4B15A8D008B2 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/CMakeLists.txt */,
-			);
-			name = uninstall;
-			sourceTree = "<group>";
-		};
-		8692B42D6EE6408EA9D9D41F /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				7604BFC1F1804B9B8065E6C9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m */,
-				29CB257A5C374B30886EC0C8 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m */,
-				1CE508C49BFA455CAAFC8AB1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m */,
-				0C56D9A08B3B4DDC9E987623 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c */,
-				5CCF9A4F382B432EA77198E1 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m */,
-				79A4269D4F904096A7820E3C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/context.c */,
-				D1BD651AFD3E4C2AA7527419 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/init.c */,
-				28BD7E538C8C437B87E6A450 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/input.c */,
-				CD3FA78BAA934E3DBFF8FD50 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/monitor.c */,
-				108BE848156A45388D9DED56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m */,
-				644AB27C10034BA7A6C3303D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c */,
-				488D065142F64CDFAF25125B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/vulkan.c */,
-				CA617012652044B0A372B5A5 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/window.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		924BB644C0184CB49EDB7B0E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F00EE59406BE4118B984EC95 /* particleMan */,
-				C4F7F1888EF7454883665854 /* glfw */,
+				5E3F9E88105440A39EA60624 /* particleMan */,
+				95BC00131C3E4552ADCCADF4 /* glfw */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BFDFE4DBB904188BE2C53B9 /* Header Files */ = {
+		546EC61749C4452E9C2A5456 /* GLFW3 */ = {
 			isa = PBXGroup;
 			children = (
-				6C0058D8B7F948BDBD9B4A56 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/glfw_config.h */,
-				DE9E3EB956AD4D3BAEC50EE9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3.h */,
-				0F76935B21E14834B323CD6E /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include/GLFW/glfw3native.h */,
-				F73BE22251D1428C9091B1B3 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.h */,
-				979BEEAF641C4221A308831B /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_platform.h */,
-				36C06C25FFEE439089E337C6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/internal.h */,
-				CCC5E61A76094498BB8FAABF /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.h */,
-				CF18E5F76D1A4DFE8CCF00F6 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.h */,
+				B44F1929FBD347D588377BCE /* uninstall */,
+				CF74518C00264463A21E9584 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		58C81D17F8A14FB09EE505D5 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				5526739B6A73401F933687C4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/src/glad.c */,
+				AACA1607A7914E6188D409D2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.cpp */,
+				F6F2636F90DB490CA462DB46 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.cpp */,
+				D9326EACFFF147EB8052647C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.cpp */,
+				13C003A8FD9C4DD691584895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.cpp */,
+				2C23E81B31F146B1821F982A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.cpp */,
+				0B89BD2AA954418F854282FA /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/fbx_convert.cpp */,
+				D6725AD85A94436C9795C1FB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		79581254ECAA431E8EDF5691 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C52545C1B344FF2883DA4F4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */,
+				9823EEEEE2B24CA085F291FE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */,
+				671160A610B345B9A07DCB54 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */,
+				66784D0B587144F5A4ECD153 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */,
+				557AD3A5595A4D83B5B39506 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */,
+				B6497490E6314AE9A1910740 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */,
+				60D491081B89470F9F3CB85E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */,
+				724AFE885B2D4C56BA8FAA2F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */,
+				945B7BCA1F24437C93660EFC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */,
+				304A4311FFDE43CA9F28F61A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */,
+				71D909DCAF884E6FB71E4F33 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		9F6E1188100E4697B91D489D /* particleMan */ = {
+		806416902B54457482FBEF1E /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				778B67F505714295A37D7A2A /* Source Files */,
-				EA561D5668374854BE7D7688 /* Header Files */,
-				BF48F8D238C64BE587FD58A7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */,
+				942C83760ADC4EFB97742835 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */,
+				9408ECF4E6954A2B8FCE9708 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */,
+				5BDC7B61D7BA4AFD82D90E74 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */,
+				6354CEA9DAE747C6B6F05E45 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */,
+				07DB6F1B8BB34AFCAF0630C6 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */,
+				37503D75FD7C4ABBA2984149 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/context.c */,
+				B1AA789C048C43FCB44C3FAB /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */,
+				5F5CF40952164BA8A55B7969 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/init.c */,
+				CB2A5652F2CE4F6CA3D6EB9A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/input.c */,
+				6133073051574C2A9695A827 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */,
+				84563DE9EA3443768691EC76 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */,
+				B6B2324B44A34847A1A3E03F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */,
+				56457DB92F7A4ED283B674EE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */,
+				5BD5A4AD508F483985861615 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */,
+				ACFC3261D5AF4A4E876E806D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		807CEBDB966C4DCB9E52C3DC /* particleMan */ = {
+			isa = PBXGroup;
+			children = (
+				58C81D17F8A14FB09EE505D5 /* Source Files */,
+				CDEFE2C2117942F39AB55C5E /* Header Files */,
+				AD90AE3300FB4495A5057750 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/CMakeLists.txt */,
+				828778E31ACD4F7DA38B8957 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.frag */,
+				7E22BFA9CA8C4E9890AEF75A /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/resources/skeleton.vert */,
 			);
 			name = particleMan;
 			sourceTree = "<group>";
 		};
-		C490A988225A45D49CF466AC /* ZERO_CHECK */ = {
+		B44F1929FBD347D588377BCE /* uninstall */ = {
 			isa = PBXGroup;
 			children = (
-				298794D991BB4DB3A431896E /* CMake Rules */,
-				085FDE56DFBC44F680819B76 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */,
+				FEFB8FB6C2604AB986C19A05 /* CMake Rules */,
+				552814BD22EB4521AABBFDF0 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/CMakeLists.txt */,
 			);
-			name = ZERO_CHECK;
+			name = uninstall;
 			sourceTree = "<group>";
 		};
-		E1081E8DFBDF4FED9B1AC35D /* CMake Rules */ = {
+		CDEFE2C2117942F39AB55C5E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9172FAE14134CCC93D801FC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/KHR/khrplatform.h */,
+				2FBA43FDB9C34656A9302FB2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include/glad/glad.h */,
+				2360A350B10A41BFBEBAE5D7 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.h */,
+				07E7D14313284EDBBBF566D4 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.h */,
+				09C4131A4F2347F39B09E23F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.h */,
+				4CF84A8703814A45BE434E9C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.h */,
+				EB33A909A8ED43CF9CB356C9 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.h */,
+				4295306F1B2048B59488B58C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/bone.h */,
+				099E568FA1D441B0A5C5D8F2 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/stb_image.h */,
+				8AAC42A6E91E488A9E5A9895 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/tiny_obj_loader.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		CF74518C00264463A21E9584 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				806416902B54457482FBEF1E /* Source Files */,
+				79581254ECAA431E8EDF5691 /* Header Files */,
+				616B891D969843A8ABC78D50 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		FEFB8FB6C2604AB986C19A05 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		EA561D5668374854BE7D7688 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				093162CF824741DCB8860821 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */,
-				9E89C906946E4C61BA27E19A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */,
-				B3AA2EAE71DF41EC9C5C8A16 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */,
-				928F4D0B90AE4DC0A8E2829E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */,
-				0E0F722A615649D3A4E20A39 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */,
-				3A4BACF8F8DB4CE6BE627B98 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */,
-				96E2A4B25C6641B1A61E1E63 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */,
-				C75DE26A18DA4B4DBADD982A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */,
-				BCEDA5931519417EB9349881 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */,
-				7F7C6EFC26324AE6BB089698 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */,
-			);
-			name = "Header Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		256965BBAA6D4109822DCC5D /* glfw */ = {
+		91CF5CA17BAB417B99A2CB9B /* glfw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C9D6CAF12BC4DD1A5CA1BD6 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = C9B01649DC8641158535AF62 /* Build configuration list for PBXNativeTarget "glfw" */;
 			buildPhases = (
-				AD7E043A235A41988097C07E /* Sources */,
+				A290F1E1A2E04407BE3F4E4C /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				787B7185DC4A4E9AAE0EF299 /* PBXTargetDependency */,
+				EACFB1BF408840799CAD565A /* PBXTargetDependency */,
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = C4F7F1888EF7454883665854 /* glfw */;
+			productReference = 95BC00131C3E4552ADCCADF4 /* glfw */;
 			productType = "com.apple.product-type.library.static";
 		};
-		399432E4E544491D98F32507 /* particleMan */ = {
+		A903D66CD3284B50A779BF09 /* particleMan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BBFD54A2E6D4C6DABDBB017 /* Build configuration list for PBXNativeTarget "particleMan" */;
+			buildConfigurationList = BEC338C572A04F148E2C25F1 /* Build configuration list for PBXNativeTarget "particleMan" */;
 			buildPhases = (
-				7079D908401E41F4AC83ADC8 /* Sources */,
+				215531ED5747498BA96B67B4 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				33AF023C8A784DD0A88DDB05 /* PBXTargetDependency */,
-				BCF02ED0764C46F6A23BA58F /* PBXTargetDependency */,
+				B14932CDD31344B29C9FCFCA /* PBXTargetDependency */,
+				CE96844D0ACD44EE9EFD4301 /* PBXTargetDependency */,
 			);
 			name = particleMan;
 			productName = particleMan;
-			productReference = F00EE59406BE4118B984EC95 /* particleMan */;
+			productReference = 5E3F9E88105440A39EA60624 /* particleMan */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DD1514507FB24CA395DB435D /* Project object */ = {
+		54EEB4540942429FB495FA80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 481FDC656F9B4FCE989A4FE0 /* Build configuration list for PBXProject "particleMan" */;
+			buildConfigurationList = 2688E787AE55469DA002B2AE /* Build configuration list for PBXProject "particleMan" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				EAE03A4BEA8D42C48F71C99B /* Debug */,
-				590F4DD9BEAF44EEAB0C8DB4 /* Release */,
-				6A9D90442C9845EDA46550C4 /* MinSizeRel */,
-				4D655A62F6954A33BA1A81B3 /* RelWithDebInfo */,
+				046EDFA6F8E24E609C47FDD8 /* Debug */,
+				F361377E760E4278BA3673D4 /* Release */,
+				D8C7D44B59C8415A821BDB9C /* MinSizeRel */,
+				062AB8F40CD14713978C99AB /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 78B6443886E64D7BB1160FDC;
+			mainGroup = 34A06F8166C2449EA9E9A752;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				77837F97C0B547ACA1ED0898 /* ALL_BUILD */,
-				EA7E5716ED534D609D67EE74 /* ZERO_CHECK */,
-				55A07831168041F49122857C /* install */,
-				399432E4E544491D98F32507 /* particleMan */,
-				D3982EB66B2A420B9CC6251E /* uninstall */,
-				256965BBAA6D4109822DCC5D /* glfw */,
+				6913566AD5874DD7946F012D /* ALL_BUILD */,
+				D92A01736F51422589676ECD /* ZERO_CHECK */,
+				0A0085227068440EA67D151B /* install */,
+				A903D66CD3284B50A779BF09 /* particleMan */,
+				42DE1626AF9A4D53B0129649 /* uninstall */,
+				91CF5CA17BAB417B99A2CB9B /* glfw */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CFC9E2C8C8F4F46BD720978 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build -f /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		308AFFA4155F478BAB71337E /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build -f /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		4D566AADA26D472CA19F0279 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sydney/Documents/Collections/Software\\ Downloads/glfw-3.2.1/debug -f /Users/sydney/Documents/Collections/Software\\ Downloads/glfw-3.2.1/debug/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		58694D01BEA24ECE96D66CD4 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		8F8F2944BF7B4FDCBF7D9D45 /* CMake PostBuild Rules */ = {
+		01FDF996CA704E96A9894C3A /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -525,10 +480,10 @@ exit 0";
 			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build -f /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		95628A5F9FFB4D28B7C8AF15 = {
+		5082565E49684B2C9DC0375D = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -543,7 +498,40 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		B5EB200BB2BA4FE9AB9B61C7 = {
+		56ADFC2A1EF2450C8E714E24 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5A6A1E29945C455DB920FEE8 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8FE8FA36E3CC4724A8CED8DE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		A3ED3D2E2FB0446E82959AFB = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,7 +546,22 @@ exit 0";
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		EB256B4370274A559F7544BE = {
+		EAE7AF46641E4E44B32732A0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F0B259570F9A4113B984C2AD = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -576,83 +579,85 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7079D908401E41F4AC83ADC8 /* Sources */ = {
+		215531ED5747498BA96B67B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CAC8948AA34210BC88731F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */,
-				1FEB612F6ADA45D0AE18E68C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */,
-				F793892768284F7D9058B73C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */,
-				980BF15CB49A4298B7DA663B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */,
-				A441DEA37C9C4CC98869ED53 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */,
-				D98A1A5F76B1412FB74B4DFA /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */,
-				520AAC737EB944D4BE5A962D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */,
-				77B45BF70A57473B908EEBF9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */,
+				921E2A2BCFC04EC28A4E5E7C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/src/glad.c */,
+				6356E5F953B34562B1F13E73 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Camera.cpp */,
+				D8D279F1D48D4AC49DDD1C0E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/GLSL.cpp */,
+				5E1E57A124A744A39ECF0F57 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Program.cpp */,
+				46F3862E85584988815B5E74 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/Shape.cpp */,
+				E23BDD7F353A4BC2B306C062 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/WindowManager.cpp */,
+				0FB5CC02CBB243A19A349364 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/fbx_convert.cpp */,
+				3959291CDF584CC8B2B6655F /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/src/main.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD7E043A235A41988097C07E /* Sources */ = {
+		A290F1E1A2E04407BE3F4E4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC064D7A5E844C30BA35904A /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_init.m */,
-				3ED3AE36E98A4B7CAA5BD81D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_joystick.m */,
-				83E3413D856449E9B16340B4 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_monitor.m */,
-				220AC9D0971944D29E377A97 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_time.c */,
-				AAD25333FBDA4A5EB636FC93 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/cocoa_window.m */,
-				2CE3A84D2EFD4AB883B99BB9 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/context.c */,
-				D34C43A3D34643AAB35F7E5E /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/init.c */,
-				D7A23FD8F84A407DBF5319D8 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/input.c */,
-				D38C0CE25B644146A4E33D6C /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/monitor.c */,
-				E192077A970C4CD0B32610BE /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/nsgl_context.m */,
-				2DE7D6F41DF940D89326A869 /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/posix_tls.c */,
-				AE33F7A8F29C474F9A00716D /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/vulkan.c */,
-				FEBC9788E27B4A35862DF4FE /* /Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src/window.c */,
+				634DD1F058C4462BAE15CB4E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */,
+				7F2A177A131740259D8ACD80 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */,
+				7EE0F345A96B4F58AF3D6983 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */,
+				A17D5274D0784EF1B34F388C /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */,
+				28F7013E94AF4F2A9B12322D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */,
+				FEA02C57A34D45D691B5D29D /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/context.c */,
+				E496E2918723452FB873E23E /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */,
+				E3517A884E32466AB2DA3148 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/init.c */,
+				D164E2DCC7E644619C070CFE /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/input.c */,
+				0BCA2F1875B44C88B9351A16 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */,
+				0785052E035E4C9D865E50A3 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */,
+				B7C0C3172B2F40678B4B74B9 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */,
+				D8BF6BA8182B40A8AA7CD654 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */,
+				A192B64A81CF4E029A9363EC /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */,
+				48141E4B73EB4649A6EA7B36 /* /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src/window.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		33AF023C8A784DD0A88DDB05 /* PBXTargetDependency */ = {
+		1D3B291C40224912B406F092 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 256965BBAA6D4109822DCC5D /* glfw */;
-			targetProxy = 1379E224B3F34EF0B48657CC /* PBXContainerItemProxy */;
+			target = 91CF5CA17BAB417B99A2CB9B /* glfw */;
+			targetProxy = 05CEECEEE1D244C0AE2C0CC7 /* PBXContainerItemProxy */;
 		};
-		4488B9777D4B4DCF838160F6 /* PBXTargetDependency */ = {
+		4C67A6A7F0804CAE9C3E5D96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA7E5716ED534D609D67EE74 /* ZERO_CHECK */;
-			targetProxy = 68FE1704F8054D3F8B85C49A /* PBXContainerItemProxy */;
+			target = A903D66CD3284B50A779BF09 /* particleMan */;
+			targetProxy = A184FE3ADA9C475C9E0CEE2F /* PBXContainerItemProxy */;
 		};
-		478E3F61B4EA4F88A1FB77D8 /* PBXTargetDependency */ = {
+		B14932CDD31344B29C9FCFCA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 77837F97C0B547ACA1ED0898 /* ALL_BUILD */;
-			targetProxy = 11C9726263774F55884F1D86 /* PBXContainerItemProxy */;
+			target = 91CF5CA17BAB417B99A2CB9B /* glfw */;
+			targetProxy = FD312E345785466AA734D457 /* PBXContainerItemProxy */;
 		};
-		787B7185DC4A4E9AAE0EF299 /* PBXTargetDependency */ = {
+		B6C2F306A85D48A0ADA981BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA7E5716ED534D609D67EE74 /* ZERO_CHECK */;
-			targetProxy = F561C6177BCB4296AB4D150C /* PBXContainerItemProxy */;
+			target = 6913566AD5874DD7946F012D /* ALL_BUILD */;
+			targetProxy = 14D0266BDE474CC3897B4B13 /* PBXContainerItemProxy */;
 		};
-		8CD978E201564871BEF476FB /* PBXTargetDependency */ = {
+		CE96844D0ACD44EE9EFD4301 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 256965BBAA6D4109822DCC5D /* glfw */;
-			targetProxy = B50CF966440543F8B2C70F40 /* PBXContainerItemProxy */;
+			target = D92A01736F51422589676ECD /* ZERO_CHECK */;
+			targetProxy = A61FBD90276047F696EE7598 /* PBXContainerItemProxy */;
 		};
-		BCF02ED0764C46F6A23BA58F /* PBXTargetDependency */ = {
+		D8D4CACE5AC54552AA85A89C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA7E5716ED534D609D67EE74 /* ZERO_CHECK */;
-			targetProxy = F590C8D0F3994673B3407FEA /* PBXContainerItemProxy */;
+			target = D92A01736F51422589676ECD /* ZERO_CHECK */;
+			targetProxy = 81141F9669A74D9183B0E73C /* PBXContainerItemProxy */;
 		};
-		E556BD1AE7DF4C33BFC25E21 /* PBXTargetDependency */ = {
+		EACFB1BF408840799CAD565A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 399432E4E544491D98F32507 /* particleMan */;
-			targetProxy = 2AC9EDF2DE1C4710B195686E /* PBXContainerItemProxy */;
+			target = D92A01736F51422589676ECD /* ZERO_CHECK */;
+			targetProxy = 5F210CE90582429FB900D917 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0F31F1A16187433C8AD5E7B3 /* Release */ = {
+		24E1F15D21114A74B904E99C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -661,19 +666,183 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = install;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Release;
 		};
-		0F62A41A75874EC98634C04E /* Debug */ = {
+		254959C267A34C4383416BDF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2A96E1B4239C47FCBAA455A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		4081FBFED99740DE93756B07 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		451A4BFCD2D146549DEBDB8A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		46E9D939A2CD4F608241D57E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		470D68640CAD45BD98946FCC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4D1A3328B699499595A8A5B6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5A7D8C1116FC4F049C7ABF8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5EC67B0E45DA44238224051B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -684,22 +853,22 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glm-0.9.8.3","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "    ";
 				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/Debug/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		222CAAC5C1A44A8DAAFB76BB /* RelWithDebInfo */ = {
+		60FA1997EA0E43DF8CA8FDEC /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -708,121 +877,121 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		2C20E6A14D8D4A889F76BC8B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/build";
-			};
-			name = Release;
-		};
-		2C76AC0B5B4A465CA355C9BD /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src\"");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		2FA6B52FA2BA45178C334F37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		364F160E20664FC1B12B9ADF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "    -DNDEBUG  ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/Release/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = particleMan;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		3C65475772424739BE80B184 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		46C8F1D79944432D96695031 /* MinSizeRel */ = {
+		6BB0A8E9D4A64A858C4B82D1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7C0556E833C24877B34CB1D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7C39E173829F4B639F1AB342 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		8A4AF4B46C1740739FDB71E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/build;
+			};
+			name = Debug;
+		};
+		908B34A5AEFC49109B46AC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9C03283A01C247FF85FAFB6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/build;
+			};
+			name = Release;
+		};
+		A560DDB295D247E29EFF03E6 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -833,21 +1002,21 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src\"");
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC  ";
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		50CD71ECABEE42CCAA2EB627 /* Debug */ = {
+		A9CA20BCDB574098BD86D873 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -856,49 +1025,18 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"");
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = uninstall;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		6F833FF4E6894B24B8EAC57A /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/build";
-			};
-			name = MinSizeRel;
-		};
-		737AD4FEB870491A83874AFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Release;
 		};
-		79D685E9CE694A41B4FCB5F0 /* RelWithDebInfo */ = {
+		AF45FA33E3AB426A8069C899 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -907,19 +1045,108 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B02B1C26903C452E8855BF66 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/build;
+			};
+			name = MinSizeRel;
+		};
+		B0D7CCA5CB4A41169E5BE512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = uninstall;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
+			name = Debug;
+		};
+		C2381487BDAB4A438FB21F4A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/build;
+			};
 			name = RelWithDebInfo;
 		};
-		7E92842DA4F041AC8B96E246 /* Debug */ = {
+		D1F87D55E3D1424FA4FC4D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glm-0.9.8.3","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = particleMan;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		DC2582ED3046490D85F88ABC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glm-0.9.8.3","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = particleMan;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E0414CE3AA6E4924841D61FD /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -927,24 +1154,24 @@ exit 0";
 				EXECUTABLE_SUFFIX = .a;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src\"");
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/src","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src");
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "   -fPIC -Wall  ";
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC  ";
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src";
+				SYMROOT = "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		7EBA5F9D64D545119C901943 /* RelWithDebInfo */ = {
+		ED49F39A548549338A31E4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -953,19 +1180,18 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Debug;
 		};
-		8094B60FD44943378C7B290E /* RelWithDebInfo */ = {
+		F41E9676822D45F6B0EB393B /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -976,339 +1202,102 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glad/include,"/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glfw-3.3-prerelease/include","/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/ext/glm-0.9.8.3","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "       -DNDEBUG  ";
 				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic        -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/RelWithDebInfo/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
+				SYMROOT = /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = RelWithDebInfo;
-		};
-		8151A7522E944193A765FC33 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		885B676628724C4CA000D963 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		A1491F5F6A354765AB6F513A /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		B22220108E4C454C8EB6DD16 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		C3C40149BC484AD0BE5CCACB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		C93845D66F6345F58FF04D08 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/src\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src\"");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		CE209C19DCCD4B0FAE713111 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		CF00E2392270492C96B20459 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		DE974D3E0BFC4A4F995F1BF9 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = "    -DNDEBUG  ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/MinSizeRel/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = particleMan;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		E926E98781D54E03BAE4F87E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/build";
-			};
-			name = RelWithDebInfo;
-		};
-		F22CF4E0348A4D9FA2631317 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/include\"","\"/Users/sydney/Documents/Collections/Software Downloads/glm-master\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		FEB955C7D44D441F91493328 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/build";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BAD73A5A22D43108967E0C2 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+		1A1A32A68724461C97E4034E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50CD71ECABEE42CCAA2EB627 /* Debug */,
-				C3C40149BC484AD0BE5CCACB /* Release */,
-				885B676628724C4CA000D963 /* MinSizeRel */,
-				79D685E9CE694A41B4FCB5F0 /* RelWithDebInfo */,
+				AF45FA33E3AB426A8069C899 /* Debug */,
+				5A7D8C1116FC4F049C7ABF8B /* Release */,
+				60FA1997EA0E43DF8CA8FDEC /* MinSizeRel */,
+				46E9D939A2CD4F608241D57E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		481FDC656F9B4FCE989A4FE0 /* Build configuration list for PBXProject "particleMan" */ = {
+		2688E787AE55469DA002B2AE /* Build configuration list for PBXProject "particleMan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEB955C7D44D441F91493328 /* Debug */,
-				2C20E6A14D8D4A889F76BC8B /* Release */,
-				6F833FF4E6894B24B8EAC57A /* MinSizeRel */,
-				E926E98781D54E03BAE4F87E /* RelWithDebInfo */,
+				8A4AF4B46C1740739FDB71E0 /* Debug */,
+				9C03283A01C247FF85FAFB6F /* Release */,
+				B02B1C26903C452E8855BF66 /* MinSizeRel */,
+				C2381487BDAB4A438FB21F4A /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		5BBFD54A2E6D4C6DABDBB017 /* Build configuration list for PBXNativeTarget "particleMan" */ = {
+		317993416A684791A01DE576 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0F62A41A75874EC98634C04E /* Debug */,
-				364F160E20664FC1B12B9ADF /* Release */,
-				DE974D3E0BFC4A4F995F1BF9 /* MinSizeRel */,
-				8094B60FD44943378C7B290E /* RelWithDebInfo */,
+				B0D7CCA5CB4A41169E5BE512 /* Debug */,
+				A9CA20BCDB574098BD86D873 /* Release */,
+				6BB0A8E9D4A64A858C4B82D1 /* MinSizeRel */,
+				254959C267A34C4383416BDF /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6C9D6CAF12BC4DD1A5CA1BD6 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		BEC338C572A04F148E2C25F1 /* Build configuration list for PBXNativeTarget "particleMan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7E92842DA4F041AC8B96E246 /* Debug */,
-				C93845D66F6345F58FF04D08 /* Release */,
-				46C8F1D79944432D96695031 /* MinSizeRel */,
-				2C76AC0B5B4A465CA355C9BD /* RelWithDebInfo */,
+				5EC67B0E45DA44238224051B /* Debug */,
+				D1F87D55E3D1424FA4FC4D65 /* Release */,
+				DC2582ED3046490D85F88ABC /* MinSizeRel */,
+				F41E9676822D45F6B0EB393B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		79D3A59BA870455A811A3F4E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		C9B01649DC8641158535AF62 /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF00E2392270492C96B20459 /* Debug */,
-				CE209C19DCCD4B0FAE713111 /* Release */,
-				A1491F5F6A354765AB6F513A /* MinSizeRel */,
-				8151A7522E944193A765FC33 /* RelWithDebInfo */,
+				2A96E1B4239C47FCBAA455A1 /* Debug */,
+				7C39E173829F4B639F1AB342 /* Release */,
+				A560DDB295D247E29EFF03E6 /* MinSizeRel */,
+				E0414CE3AA6E4924841D61FD /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		98FB1379CCFE45EEBEA865E7 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		D1FEE7FAC8C4458DBB6C58FE /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FA6B52FA2BA45178C334F37 /* Debug */,
-				0F31F1A16187433C8AD5E7B3 /* Release */,
-				B22220108E4C454C8EB6DD16 /* MinSizeRel */,
-				222CAAC5C1A44A8DAAFB76BB /* RelWithDebInfo */,
+				ED49F39A548549338A31E4D3 /* Debug */,
+				7C0556E833C24877B34CB1D6 /* Release */,
+				4081FBFED99740DE93756B07 /* MinSizeRel */,
+				470D68640CAD45BD98946FCC /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		B352E9FBEBCF4A2088C256A0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		E25731BB5584417897FAFA97 /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F22CF4E0348A4D9FA2631317 /* Debug */,
-				737AD4FEB870491A83874AFC /* Release */,
-				3C65475772424739BE80B184 /* MinSizeRel */,
-				7EBA5F9D64D545119C901943 /* RelWithDebInfo */,
+				908B34A5AEFC49109B46AC54 /* Debug */,
+				24E1F15D21114A74B904E99C /* Release */,
+				451A4BFCD2D146549DEBDB8A /* MinSizeRel */,
+				4D1A3328B699499595A8A5B6 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DD1514507FB24CA395DB435D /* Project object */;
+	rootObject = 54EEB4540942429FB495FA80 /* Project object */;
 }

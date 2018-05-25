@@ -8,62 +8,62 @@ default:
 # link.  This forces Xcode to relink the targets from scratch.  It
 # does not seem to check these dependencies itself.
 PostBuild.particleMan.Debug:
-PostBuild.glfw.Debug: /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Debug/particleMan
-/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Debug/particleMan:\
-	/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Debug/libglfw3.a\
+PostBuild.glfw.Debug: /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Debug/particleMan
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Debug/particleMan:\
+	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a\
 	/Applications/Autodesk/FBX\ SDK/2019.0/lib/clang/release/libfbxsdk.a
-	/bin/rm -f /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Debug/particleMan
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Debug/particleMan
 
 
 PostBuild.glfw.Debug:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Debug/libglfw3.a:
-	/bin/rm -f /Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Debug/libglfw3.a
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a:
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a
 
 
 PostBuild.particleMan.Release:
-PostBuild.glfw.Release: /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Release/particleMan
-/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Release/particleMan:\
-	/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Release/libglfw3.a\
+PostBuild.glfw.Release: /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Release/particleMan
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Release/particleMan:\
+	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a\
 	/Applications/Autodesk/FBX\ SDK/2019.0/lib/clang/release/libfbxsdk.a
-	/bin/rm -f /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/Release/particleMan
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/Release/particleMan
 
 
 PostBuild.glfw.Release:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Release/libglfw3.a:
-	/bin/rm -f /Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Release/libglfw3.a
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a:
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a
 
 
 PostBuild.particleMan.MinSizeRel:
-PostBuild.glfw.MinSizeRel: /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/MinSizeRel/particleMan
-/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/MinSizeRel/particleMan:\
-	/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/MinSizeRel/libglfw3.a\
+PostBuild.glfw.MinSizeRel: /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/MinSizeRel/particleMan
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/MinSizeRel/particleMan:\
+	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a\
 	/Applications/Autodesk/FBX\ SDK/2019.0/lib/clang/release/libfbxsdk.a
-	/bin/rm -f /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/MinSizeRel/particleMan
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/MinSizeRel/particleMan
 
 
 PostBuild.glfw.MinSizeRel:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/MinSizeRel/libglfw3.a:
-	/bin/rm -f /Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/MinSizeRel/libglfw3.a
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a:
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a
 
 
 PostBuild.particleMan.RelWithDebInfo:
-PostBuild.glfw.RelWithDebInfo: /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/RelWithDebInfo/particleMan
-/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/RelWithDebInfo/particleMan:\
-	/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/RelWithDebInfo/libglfw3.a\
+PostBuild.glfw.RelWithDebInfo: /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/RelWithDebInfo/particleMan
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/RelWithDebInfo/particleMan:\
+	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a\
 	/Applications/Autodesk/FBX\ SDK/2019.0/lib/clang/release/libfbxsdk.a
-	/bin/rm -f /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/RelWithDebInfo/particleMan
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/RelWithDebInfo/particleMan
 
 
 PostBuild.glfw.RelWithDebInfo:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/RelWithDebInfo/libglfw3.a:
-	/bin/rm -f /Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/RelWithDebInfo/libglfw3.a
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a:
+	/bin/rm -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a
 
 
 
 
 # For each target create a dummy ruleso the target does not have to exist
 /Applications/Autodesk/FBX\ SDK/2019.0/lib/clang/release/libfbxsdk.a:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Debug/libglfw3.a:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/MinSizeRel/libglfw3.a:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/RelWithDebInfo/libglfw3.a:
-/Users/sydney/Documents/Collections/Software\ Downloads/glfw-3.2.1/debug/src/Release/libglfw3.a:
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a:
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a:
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a:
+/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a:
