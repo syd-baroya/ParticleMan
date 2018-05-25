@@ -1,0 +1,10 @@
+/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/CMakeFiles/install.dir
+/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/CMakeFiles/particleMan.dir
+/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/CMakeFiles/ALL_BUILD.dir
+/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/CMakeFiles/ZERO_CHECK.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/CMakeFiles/install.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/CMakeFiles/uninstall.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/CMakeFiles/ALL_BUILD.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/CMakeFiles/ZERO_CHECK.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/CMakeFiles/install.dir
+/Users/sydney/Documents/Collections/Software Downloads/glfw-3.2.1/debug/src/CMakeFiles/glfw.dir
