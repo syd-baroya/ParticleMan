@@ -198,7 +198,12 @@ public:
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
-        readtobone("../../resources/noahChar00.fbx",&all_animation,&root);
+        shape = make_shared<Shape>();
+        shape->loadMesh(resourceDirectory + "/pMan.obj");
+        shape->resize();
+        shape->init();
+        
+        readtobone("../../resources/pMan.fbx",&all_animation,&root);
         root->set_animations(&all_animation,animmat,animmatsize);
         
         glGenVertexArrays(1, &VertexArrayID);
@@ -273,7 +278,7 @@ public:
             totaltime_untilframe_ms = 0;
             frame++;
         }
-        root->play_animation(frame,"avatar_0_fbx_tmp");    //name of current animation
+        root->play_animation(frame,"Take 001");    //name of current animation
 
 		// Clear framebuffer.
 		glClearColor(0.3f, 0.7f, 0.8f, 1.0f);
@@ -298,8 +303,9 @@ public:
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
-        glDrawArrays(GL_LINES, 4, size_stick-4);
-        glBindVertexArray(0);
+        shape->draw(skeleton);
+//        glDrawArrays(GL_LINES, 4, size_stick-4);
+//        glBindVertexArray(0);
         skeleton->unbind();
 
         

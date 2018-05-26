@@ -2,9 +2,9 @@
 # Custom rules for ALL_BUILD
 .SUFFIXES: 
 all: \
-	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeFiles/ALL_BUILD
+	/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/CMakeFiles/ALL_BUILD
 
 
-/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeFiles/ALL_BUILD: 
+/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/CMakeFiles/ALL_BUILD: 
 	echo ""
 	echo Build\ all\ projects

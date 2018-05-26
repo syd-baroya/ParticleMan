@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeFiles/ZERO_CHECK
+	/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/CMakeFiles/ZERO_CHECK
 
 
-/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeFiles/ZERO_CHECK: 
+/Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/CMakeScripts/ReRunCMake.make
+	make -f /Users/sydney/Documents/CSC474/finalprog\ -\ ParticleMan/build/CMakeScripts/ReRunCMake.make

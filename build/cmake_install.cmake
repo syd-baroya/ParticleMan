@@ -1,4 +1,4 @@
-# Install script for directory: /Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan
+# Install script for directory: /Users/sydney/Documents/CSC474/finalprog - ParticleMan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/ext/glfw-3.3-prerelease/debug/cmake_install.cmake")
+  include("/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/noahpaige/Desktop/csc/csc474/finalproject/ParticleMan/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

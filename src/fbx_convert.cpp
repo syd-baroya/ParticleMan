@@ -273,10 +273,10 @@ void PrintAnimationData(all_animations *all_animation,FbxScene* lScene)
         long long duration = end.GetMilliSeconds();
         int keyframecount = end.GetFrameCount(FbxTime::eFrames24) - start.GetFrameCount(FbxTime::eFrames24) + 1;
         
-//        cout << endl;
-//        cout << "animation name: " << mAnimationName << endl;
-//        cout << "key frame count: " << keyframecount << endl;
-//        cout << "animation duration (ms): " << duration << endl;
+        cout << endl;
+        cout << "animation name: " << mAnimationName << endl;
+        cout << "key frame count: " << keyframecount << endl;
+        cout << "animation duration (ms): " << duration << endl;
         for (int k = 0; k < lNode->GetChildCount(); k++)
             CalcTransRotAnim(all_animation,lScene, lNode->GetChild(k), l);
     }
