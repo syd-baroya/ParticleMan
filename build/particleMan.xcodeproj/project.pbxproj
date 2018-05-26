@@ -58,86 +58,30 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		00D2F1F68A274497BBA74020 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */ = {isa = PBXBuildFile; fileRef = A1D53EB4D0B14B1FA6704470 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */; };
-		08A48E8DC408427991AA39E2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 43408E794F4C4726A669413F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */; };
-		19FE19C3C08641AF9A21629B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 0C2E592CF21346F5948C4880 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */; };
-		2450944866AE47A9A27F733B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */ = {isa = PBXBuildFile; fileRef = BCAF2A324C0D4670A7BE14A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */; };
-		2F2AE7EDA86E4BB5AD2CC1BB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */ = {isa = PBXBuildFile; fileRef = 6DC2A4A719B64CA581CC1B31 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */; };
-		383D96DE446F4F989FD3CB04 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 4A2DF28BD13C440297AEA431 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */; };
-		40001D22D5CF42AE89CEFA09 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 665D20EDFDFB416EB236BB5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */; };
-		4DE76089D03E4B11A2BFA819 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */ = {isa = PBXBuildFile; fileRef = 0632BD67990A40BF9F0BD4AB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */; };
-		52048A731A1C44D8BD0ABD8F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */ = {isa = PBXBuildFile; fileRef = B2FCD2EAAEB240DA98A6C126 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */; };
-		5E0003962BA74EE49C2966BB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/input.c */ = {isa = PBXBuildFile; fileRef = 73596AFCE35644CE9E4C22E6 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/input.c */; };
-		60ACB32E2094467BA2EA20EB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */ = {isa = PBXBuildFile; fileRef = A600D0F3D084458CBE8A60E8 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */; };
-		66722CE5E4184FDA8F9300E7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = F08A930D0E7747858A30AB89 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */; };
-		799C0F9AB01B4E66BBBF1591 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 075C35B368B241BE8D882892 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */; };
-		79A0121A7750484185CA8D19 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */ = {isa = PBXBuildFile; fileRef = D9311741715E41989E3A714D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */; };
-		862AF41EAE074ABFBF782603 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.frag */ = {isa = PBXBuildFile; fileRef = 7E5EA75324E84E0CAC0FFD7B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.frag */; };
-		90C75C1F3ECA4FE49D8088D6 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */ = {isa = PBXBuildFile; fileRef = 93CEE40EF6C84D42AE05FD1F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */; };
-		9300AFB5FDA8406C929D1956 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/window.c */ = {isa = PBXBuildFile; fileRef = 2E5CC34E9020497786638228 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/window.c */; };
-		9B92A2B70D9440BCB1D4E25E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */ = {isa = PBXBuildFile; fileRef = 7F250B4CB3DE44FB85512F8A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */; };
-		9C4C54957E5249C6B7B88336 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = C0B21FAF1FC1427AA6B562CE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */; };
-		9FD6BAFFEBA34F7194BBB5C8 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = A70B3D25AB8941259B11761F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */; };
-		A002F88EB95741FF8CA2D186 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/context.c */ = {isa = PBXBuildFile; fileRef = BA9C39FCB87449B29AC53B6E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/context.c */; };
-		A8B3A2BAC1F64038B241154C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = F41338EDA1E74A37A4DF3E86 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */; };
-		A935169DD8E74AB4BA4351DF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */ = {isa = PBXBuildFile; fileRef = A52CDC9CED10458FA6722C79 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */; };
-		AA894529EE784C6AB9705417 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */ = {isa = PBXBuildFile; fileRef = 92647F0023804A60BB07AD05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */; };
-		AE7D2924290C422A85F70475 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 57123752D53E4635B3468245 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */; };
-		B974AFD527AA4BFFB8657663 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */ = {isa = PBXBuildFile; fileRef = 748B9BEB3DD44F1DB0B45836 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */; };
-		BCD4084676004171A4D58295 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 76A05F08DD8646E0A6A13288 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */; };
-		BF690D8DA6F341DD9A51BF18 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = 894167D3EBAB41BD9B6CA605 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */; };
-		C0941A03DCF94856817DADCC /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 74CEBF644EFB46D6B28EE76F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */; };
-		C5AE57E386AF4095925D1E1C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.vert */ = {isa = PBXBuildFile; fileRef = 33E0B72F2ED44B06BBF854A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.vert */; };
-		CC1D0A5A2C1A4D80B33EF23C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 934C432904044C04BC4335A9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */; };
-		CF1AAF1E4EF84D508A0BD00C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 39EAB2C1DFCC44D4A8CCF4C1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */; };
-		D7E0B938D1AF4BC3891023BD /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 78BEC534BE9043519FB0D6DF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */; };
-		D9437E5D98F84EC884198058 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */ = {isa = PBXBuildFile; fileRef = C29E97BF051445919388A3B2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */; };
-		DAD8875747524C999DC2924B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXBuildFile; fileRef = 4F095CE7E722440986F35700 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */; };
-		E39025A976434476B1C04DAF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 10BF8CBFDBC34EE98AC010F1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */; };
-		E488DCB323E9468FAFE212D7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = C24FA63FF38340ABB054CC50 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */; };
-		E5E548123A404CA996B28CE1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */ = {isa = PBXBuildFile; fileRef = A5F0494999E64479A21B4421 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */; };
-		E679314C3C1A4E51841439BA /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXBuildFile; fileRef = 44EE71B4B32144B2A5616947 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */; };
-		E9B8A647E2124555B07E39FB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/init.c */ = {isa = PBXBuildFile; fileRef = 45E7C0B95B154574A2065D5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/init.c */; };
-		EA8219CFC54A4470BD15838A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */ = {isa = PBXBuildFile; fileRef = ABE7E6B1BBC945E99331F55B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */; };
-		F278C6B1394249608CEF274C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = A92B8FC71F984FD396C19F3F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */; };
-		F2B5945D24E54CFFBA194461 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 9B5160B2BEBB43EB89CF726D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */; };
-		F2D8D9244F9A48229572D2AB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXBuildFile; fileRef = 233EE7F5F5484FE19425889D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */; };
-		F3878C963F18458B9F0B7239 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */ = {isa = PBXBuildFile; fileRef = 1FAEA0D002F444978BDE9EAE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */; };
-		F5BF6E97E1BA49B8AFF630E2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = D8739AEF31FF4DD693519647 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */; };
-		FA6F42891CE0495AA40C60F9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = FCA633849047421FB8A79918 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */; };
-		FAF917212940486DA1967282 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = B03FEA389CE24EE09D330BE2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */; };
+		19FE19C3C08641AF9A21629B /* posix_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E592CF21346F5948C4880 /* posix_thread.c */; };
+		40001D22D5CF42AE89CEFA09 /* osmesa_context.c in Sources */ = {isa = PBXBuildFile; fileRef = 665D20EDFDFB416EB236BB5B /* osmesa_context.c */; };
+		52048A731A1C44D8BD0ABD8F /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = B2FCD2EAAEB240DA98A6C126 /* monitor.c */; };
+		5E0003962BA74EE49C2966BB /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 73596AFCE35644CE9E4C22E6 /* input.c */; };
+		799C0F9AB01B4E66BBBF1591 /* nsgl_context.m in Sources */ = {isa = PBXBuildFile; fileRef = 075C35B368B241BE8D882892 /* nsgl_context.m */; };
+		79A0121A7750484185CA8D19 /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9311741715E41989E3A714D /* WindowManager.cpp */; };
+		9300AFB5FDA8406C929D1956 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E5CC34E9020497786638228 /* window.c */; };
+		9B92A2B70D9440BCB1D4E25E /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F250B4CB3DE44FB85512F8A /* Shape.cpp */; };
+		9FD6BAFFEBA34F7194BBB5C8 /* cocoa_time.c in Sources */ = {isa = PBXBuildFile; fileRef = A70B3D25AB8941259B11761F /* cocoa_time.c */; };
+		A002F88EB95741FF8CA2D186 /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = BA9C39FCB87449B29AC53B6E /* context.c */; };
+		A8B3A2BAC1F64038B241154C /* cocoa_init.m in Sources */ = {isa = PBXBuildFile; fileRef = F41338EDA1E74A37A4DF3E86 /* cocoa_init.m */; };
+		AA894529EE784C6AB9705417 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92647F0023804A60BB07AD05 /* Camera.cpp */; };
+		B974AFD527AA4BFFB8657663 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 748B9BEB3DD44F1DB0B45836 /* Program.cpp */; };
+		BF690D8DA6F341DD9A51BF18 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 894167D3EBAB41BD9B6CA605 /* glad.c */; };
+		CC1D0A5A2C1A4D80B33EF23C /* cocoa_monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C432904044C04BC4335A9 /* cocoa_monitor.m */; };
+		D7E0B938D1AF4BC3891023BD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78BEC534BE9043519FB0D6DF /* main.cpp */; };
+		E488DCB323E9468FAFE212D7 /* vulkan.c in Sources */ = {isa = PBXBuildFile; fileRef = C24FA63FF38340ABB054CC50 /* vulkan.c */; };
+		E9B8A647E2124555B07E39FB /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C0B95B154574A2065D5B /* init.c */; };
+		EA8219CFC54A4470BD15838A /* GLSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABE7E6B1BBC945E99331F55B /* GLSL.cpp */; };
+		F278C6B1394249608CEF274C /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B8FC71F984FD396C19F3F /* cocoa_window.m */; };
+		F3878C963F18458B9F0B7239 /* fbx_convert.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FAEA0D002F444978BDE9EAE /* fbx_convert.cpp */; };
+		F5BF6E97E1BA49B8AFF630E2 /* egl_context.c in Sources */ = {isa = PBXBuildFile; fileRef = D8739AEF31FF4DD693519647 /* egl_context.c */; };
+		FAF917212940486DA1967282 /* cocoa_joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = B03FEA389CE24EE09D330BE2 /* cocoa_joystick.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildStyle section */
-		8444A715006544BA96EEEC40 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		8875E5869C1A444A80324A82 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		9B63137A9B2E44AFB4805FBB /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		AD132526703E487ABC6BFD46 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-/* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
 		236C655D6A9E4DE2B36E500D /* PBXContainerItemProxy */ = {
@@ -192,58 +136,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0632BD67990A40BF9F0BD4AB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Program.h; path = src/Program.h; sourceTree = SOURCE_ROOT; };
-		075C35B368B241BE8D882892 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "ext/glfw-3.3-prerelease/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
-		0C2E592CF21346F5948C4880 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = "ext/glfw-3.3-prerelease/src/posix_thread.c"; sourceTree = SOURCE_ROOT; };
-		10BF8CBFDBC34EE98AC010F1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-		184148646D6B41F5B7564278 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FAEA0D002F444978BDE9EAE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fbx_convert.cpp; path = src/fbx_convert.cpp; sourceTree = SOURCE_ROOT; };
-		233EE7F5F5484FE19425889D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = khrplatform.h; path = ext/glad/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
-		2E5CC34E9020497786638228 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "ext/glfw-3.3-prerelease/src/window.c"; sourceTree = SOURCE_ROOT; };
-		33E0B72F2ED44B06BBF854A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.vert; path = resources/skeleton.vert; sourceTree = SOURCE_ROOT; };
-		39EAB2C1DFCC44D4A8CCF4C1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		3ED755F2C8564AE8A5808963 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		43408E794F4C4726A669413F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
-		44EE71B4B32144B2A5616947 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tiny_obj_loader.h; path = src/tiny_obj_loader.h; sourceTree = SOURCE_ROOT; };
-		45E7C0B95B154574A2065D5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "ext/glfw-3.3-prerelease/src/init.c"; sourceTree = SOURCE_ROOT; };
-		4A2DF28BD13C440297AEA431 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = "ext/glfw-3.3-prerelease/src/egl_context.h"; sourceTree = SOURCE_ROOT; };
-		4F095CE7E722440986F35700 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = ext/glad/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
-		57123752D53E4635B3468245 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = "ext/glfw-3.3-prerelease/src/osmesa_context.h"; sourceTree = SOURCE_ROOT; };
-		665D20EDFDFB416EB236BB5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = "ext/glfw-3.3-prerelease/src/osmesa_context.c"; sourceTree = SOURCE_ROOT; };
-		6DC2A4A719B64CA581CC1B31 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WindowManager.h; path = src/WindowManager.h; sourceTree = SOURCE_ROOT; };
-		73596AFCE35644CE9E4C22E6 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "ext/glfw-3.3-prerelease/src/input.c"; sourceTree = SOURCE_ROOT; };
-		748B9BEB3DD44F1DB0B45836 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Program.cpp; path = src/Program.cpp; sourceTree = SOURCE_ROOT; };
-		74CEBF644EFB46D6B28EE76F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = "ext/glfw-3.3-prerelease/src/posix_thread.h"; sourceTree = SOURCE_ROOT; };
-		76A05F08DD8646E0A6A13288 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
-		78BEC534BE9043519FB0D6DF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		7E5EA75324E84E0CAC0FFD7B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.frag; path = resources/skeleton.frag; sourceTree = SOURCE_ROOT; };
-		7F250B4CB3DE44FB85512F8A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Shape.cpp; path = src/Shape.cpp; sourceTree = SOURCE_ROOT; };
-		894167D3EBAB41BD9B6CA605 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ext/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
-		92647F0023804A60BB07AD05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Camera.cpp; path = src/Camera.cpp; sourceTree = SOURCE_ROOT; };
-		934C432904044C04BC4335A9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "ext/glfw-3.3-prerelease/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
-		93CEE40EF6C84D42AE05FD1F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Camera.h; path = src/Camera.h; sourceTree = SOURCE_ROOT; };
-		996A829E80C84A1F88D4DE42 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-		9B5160B2BEBB43EB89CF726D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "ext/glfw-3.3-prerelease/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
-		A1D53EB4D0B14B1FA6704470 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GLSL.h; path = src/GLSL.h; sourceTree = SOURCE_ROOT; };
-		A52CDC9CED10458FA6722C79 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = "ext/glfw-3.3-prerelease/src/mappings.h"; sourceTree = SOURCE_ROOT; };
-		A5F0494999E64479A21B4421 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bone.h; path = src/bone.h; sourceTree = SOURCE_ROOT; };
-		A600D0F3D084458CBE8A60E8 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Shape.h; path = src/Shape.h; sourceTree = SOURCE_ROOT; };
+		0632BD67990A40BF9F0BD4AB /* Program.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Program.h; path = src/Program.h; sourceTree = SOURCE_ROOT; };
+		075C35B368B241BE8D882892 /* nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = "ext/glfw-3.3-prerelease/src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+		0C2E592CF21346F5948C4880 /* posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = "ext/glfw-3.3-prerelease/src/posix_thread.c"; sourceTree = SOURCE_ROOT; };
+		10BF8CBFDBC34EE98AC010F1 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		184148646D6B41F5B7564278 /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAEA0D002F444978BDE9EAE /* fbx_convert.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = fbx_convert.cpp; path = src/fbx_convert.cpp; sourceTree = SOURCE_ROOT; };
+		233EE7F5F5484FE19425889D /* khrplatform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = khrplatform.h; path = ext/glad/include/KHR/khrplatform.h; sourceTree = SOURCE_ROOT; };
+		2E5CC34E9020497786638228 /* window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = "ext/glfw-3.3-prerelease/src/window.c"; sourceTree = SOURCE_ROOT; };
+		33E0B72F2ED44B06BBF854A2 /* skeleton.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.vert; path = resources/skeleton.vert; sourceTree = SOURCE_ROOT; };
+		39EAB2C1DFCC44D4A8CCF4C1 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3ED755F2C8564AE8A5808963 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		43408E794F4C4726A669413F /* cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.h"; sourceTree = SOURCE_ROOT; };
+		44EE71B4B32144B2A5616947 /* tiny_obj_loader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tiny_obj_loader.h; path = src/tiny_obj_loader.h; sourceTree = SOURCE_ROOT; };
+		45E7C0B95B154574A2065D5B /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = "ext/glfw-3.3-prerelease/src/init.c"; sourceTree = SOURCE_ROOT; };
+		4A2DF28BD13C440297AEA431 /* egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = "ext/glfw-3.3-prerelease/src/egl_context.h"; sourceTree = SOURCE_ROOT; };
+		4F095CE7E722440986F35700 /* glad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glad.h; path = ext/glad/include/glad/glad.h; sourceTree = SOURCE_ROOT; };
+		57123752D53E4635B3468245 /* osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = "ext/glfw-3.3-prerelease/src/osmesa_context.h"; sourceTree = SOURCE_ROOT; };
+		665D20EDFDFB416EB236BB5B /* osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = "ext/glfw-3.3-prerelease/src/osmesa_context.c"; sourceTree = SOURCE_ROOT; };
+		6DC2A4A719B64CA581CC1B31 /* WindowManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = WindowManager.h; path = src/WindowManager.h; sourceTree = SOURCE_ROOT; };
+		73596AFCE35644CE9E4C22E6 /* input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = "ext/glfw-3.3-prerelease/src/input.c"; sourceTree = SOURCE_ROOT; };
+		748B9BEB3DD44F1DB0B45836 /* Program.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Program.cpp; path = src/Program.cpp; sourceTree = SOURCE_ROOT; };
+		74CEBF644EFB46D6B28EE76F /* posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = "ext/glfw-3.3-prerelease/src/posix_thread.h"; sourceTree = SOURCE_ROOT; };
+		76A05F08DD8646E0A6A13288 /* glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+		78BEC534BE9043519FB0D6DF /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		7E5EA75324E84E0CAC0FFD7B /* skeleton.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = skeleton.frag; path = resources/skeleton.frag; sourceTree = SOURCE_ROOT; };
+		7F250B4CB3DE44FB85512F8A /* Shape.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Shape.cpp; path = src/Shape.cpp; sourceTree = SOURCE_ROOT; };
+		894167D3EBAB41BD9B6CA605 /* glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ext/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		92647F0023804A60BB07AD05 /* Camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Camera.cpp; path = src/Camera.cpp; sourceTree = SOURCE_ROOT; };
+		934C432904044C04BC4335A9 /* cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = "ext/glfw-3.3-prerelease/src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+		93CEE40EF6C84D42AE05FD1F /* Camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Camera.h; path = src/Camera.h; sourceTree = SOURCE_ROOT; };
+		996A829E80C84A1F88D4DE42 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = "ext/glfw-3.3-prerelease/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+		9B5160B2BEBB43EB89CF726D /* cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = "ext/glfw-3.3-prerelease/src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+		A1D53EB4D0B14B1FA6704470 /* GLSL.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = GLSL.h; path = src/GLSL.h; sourceTree = SOURCE_ROOT; };
+		A52CDC9CED10458FA6722C79 /* mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = "ext/glfw-3.3-prerelease/src/mappings.h"; sourceTree = SOURCE_ROOT; };
+		A5F0494999E64479A21B4421 /* bone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bone.h; path = src/bone.h; sourceTree = SOURCE_ROOT; };
+		A600D0F3D084458CBE8A60E8 /* Shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Shape.h; path = src/Shape.h; sourceTree = SOURCE_ROOT; };
 		A6D554BEBC754771830A990B /* particleMan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = particleMan; sourceTree = BUILT_PRODUCTS_DIR; };
-		A70B3D25AB8941259B11761F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "ext/glfw-3.3-prerelease/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
-		A92B8FC71F984FD396C19F3F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "ext/glfw-3.3-prerelease/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
-		ABE7E6B1BBC945E99331F55B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GLSL.cpp; path = src/GLSL.cpp; sourceTree = SOURCE_ROOT; };
-		B03FEA389CE24EE09D330BE2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
-		B2FCD2EAAEB240DA98A6C126 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "ext/glfw-3.3-prerelease/src/monitor.c"; sourceTree = SOURCE_ROOT; };
-		BA9C39FCB87449B29AC53B6E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "ext/glfw-3.3-prerelease/src/context.c"; sourceTree = SOURCE_ROOT; };
-		BCAF2A324C0D4670A7BE14A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "ext/glfw-3.3-prerelease/src/internal.h"; sourceTree = SOURCE_ROOT; };
-		C0B21FAF1FC1427AA6B562CE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "ext/glfw-3.3-prerelease/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
-		C24FA63FF38340ABB054CC50 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "ext/glfw-3.3-prerelease/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
-		C29E97BF051445919388A3B2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stb_image.h; path = src/stb_image.h; sourceTree = SOURCE_ROOT; };
-		D8739AEF31FF4DD693519647 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = "ext/glfw-3.3-prerelease/src/egl_context.c"; sourceTree = SOURCE_ROOT; };
-		D9311741715E41989E3A714D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WindowManager.cpp; path = src/WindowManager.cpp; sourceTree = SOURCE_ROOT; };
-		F08A930D0E7747858A30AB89 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
-		F41338EDA1E74A37A4DF3E86 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "ext/glfw-3.3-prerelease/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
-		FCA633849047421FB8A79918 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+		A70B3D25AB8941259B11761F /* cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = "ext/glfw-3.3-prerelease/src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+		A92B8FC71F984FD396C19F3F /* cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = "ext/glfw-3.3-prerelease/src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+		ABE7E6B1BBC945E99331F55B /* GLSL.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = GLSL.cpp; path = src/GLSL.cpp; sourceTree = SOURCE_ROOT; };
+		B03FEA389CE24EE09D330BE2 /* cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = "ext/glfw-3.3-prerelease/src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+		B2FCD2EAAEB240DA98A6C126 /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = "ext/glfw-3.3-prerelease/src/monitor.c"; sourceTree = SOURCE_ROOT; };
+		BA9C39FCB87449B29AC53B6E /* context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = "ext/glfw-3.3-prerelease/src/context.c"; sourceTree = SOURCE_ROOT; };
+		BCAF2A324C0D4670A7BE14A2 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = "ext/glfw-3.3-prerelease/src/internal.h"; sourceTree = SOURCE_ROOT; };
+		C0B21FAF1FC1427AA6B562CE /* nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = "ext/glfw-3.3-prerelease/src/nsgl_context.h"; sourceTree = SOURCE_ROOT; };
+		C24FA63FF38340ABB054CC50 /* vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = "ext/glfw-3.3-prerelease/src/vulkan.c"; sourceTree = SOURCE_ROOT; };
+		C29E97BF051445919388A3B2 /* stb_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stb_image.h; path = src/stb_image.h; sourceTree = SOURCE_ROOT; };
+		D8739AEF31FF4DD693519647 /* egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = "ext/glfw-3.3-prerelease/src/egl_context.c"; sourceTree = SOURCE_ROOT; };
+		D9311741715E41989E3A714D /* WindowManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = WindowManager.cpp; path = src/WindowManager.cpp; sourceTree = SOURCE_ROOT; };
+		EB732D1020B9FF71003CEFF9 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		EB732D1120B9FF71003CEFF9 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		F08A930D0E7747858A30AB89 /* glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = "build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h"; sourceTree = SOURCE_ROOT; };
+		F41338EDA1E74A37A4DF3E86 /* cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = "ext/glfw-3.3-prerelease/src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+		FCA633849047421FB8A79918 /* glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = "ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -262,7 +208,7 @@
 			children = (
 				E00EF7DA280D4C4CB2EB7D11 /* Source Files */,
 				9DF1183C1D7C4C90A5475DCD /* Header Files */,
-				10BF8CBFDBC34EE98AC010F1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/CMakeLists.txt */,
+				10BF8CBFDBC34EE98AC010F1 /* CMakeLists.txt */,
 			);
 			name = glfw;
 			sourceTree = "<group>";
@@ -271,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				A6D554BEBC754771830A990B /* particleMan */,
-				184148646D6B41F5B7564278 /* glfw */,
+				184148646D6B41F5B7564278 /* libglfw3.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,11 +225,13 @@
 		6ABF80D361C043A092F99483 /* particleMan */ = {
 			isa = PBXGroup;
 			children = (
+				EB732D1120B9FF71003CEFF9 /* resources */,
+				EB732D1020B9FF71003CEFF9 /* src */,
 				9015C172AEA64619BCB2BF79 /* Source Files */,
 				E17DDCECB398454CA4783E3A /* Header Files */,
-				39EAB2C1DFCC44D4A8CCF4C1 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */,
-				7E5EA75324E84E0CAC0FFD7B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.frag */,
-				33E0B72F2ED44B06BBF854A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/resources/skeleton.vert */,
+				39EAB2C1DFCC44D4A8CCF4C1 /* CMakeLists.txt */,
+				7E5EA75324E84E0CAC0FFD7B /* skeleton.frag */,
+				33E0B72F2ED44B06BBF854A2 /* skeleton.vert */,
 			);
 			name = particleMan;
 			sourceTree = "<group>";
@@ -292,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				6FF457E9F9F7475689B2C252 /* CMake Rules */,
-				996A829E80C84A1F88D4DE42 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/CMakeLists.txt */,
+				996A829E80C84A1F88D4DE42 /* CMakeLists.txt */,
 			);
 			name = uninstall;
 			sourceTree = "<group>";
@@ -307,14 +255,14 @@
 		9015C172AEA64619BCB2BF79 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				894167D3EBAB41BD9B6CA605 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */,
-				92647F0023804A60BB07AD05 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */,
-				ABE7E6B1BBC945E99331F55B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */,
-				748B9BEB3DD44F1DB0B45836 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */,
-				7F250B4CB3DE44FB85512F8A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */,
-				D9311741715E41989E3A714D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */,
-				1FAEA0D002F444978BDE9EAE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */,
-				78BEC534BE9043519FB0D6DF /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */,
+				894167D3EBAB41BD9B6CA605 /* glad.c */,
+				92647F0023804A60BB07AD05 /* Camera.cpp */,
+				ABE7E6B1BBC945E99331F55B /* GLSL.cpp */,
+				748B9BEB3DD44F1DB0B45836 /* Program.cpp */,
+				7F250B4CB3DE44FB85512F8A /* Shape.cpp */,
+				D9311741715E41989E3A714D /* WindowManager.cpp */,
+				1FAEA0D002F444978BDE9EAE /* fbx_convert.cpp */,
+				78BEC534BE9043519FB0D6DF /* main.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -322,17 +270,17 @@
 		9DF1183C1D7C4C90A5475DCD /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				F08A930D0E7747858A30AB89 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/glfw_config.h */,
-				76A05F08DD8646E0A6A13288 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3.h */,
-				FCA633849047421FB8A79918 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include/GLFW/glfw3native.h */,
-				43408E794F4C4726A669413F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.h */,
-				9B5160B2BEBB43EB89CF726D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_platform.h */,
-				4A2DF28BD13C440297AEA431 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.h */,
-				BCAF2A324C0D4670A7BE14A2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/internal.h */,
-				A52CDC9CED10458FA6722C79 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/mappings.h */,
-				C0B21FAF1FC1427AA6B562CE /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.h */,
-				57123752D53E4635B3468245 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.h */,
-				74CEBF644EFB46D6B28EE76F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.h */,
+				F08A930D0E7747858A30AB89 /* glfw_config.h */,
+				76A05F08DD8646E0A6A13288 /* glfw3.h */,
+				FCA633849047421FB8A79918 /* glfw3native.h */,
+				43408E794F4C4726A669413F /* cocoa_joystick.h */,
+				9B5160B2BEBB43EB89CF726D /* cocoa_platform.h */,
+				4A2DF28BD13C440297AEA431 /* egl_context.h */,
+				BCAF2A324C0D4670A7BE14A2 /* internal.h */,
+				A52CDC9CED10458FA6722C79 /* mappings.h */,
+				C0B21FAF1FC1427AA6B562CE /* nsgl_context.h */,
+				57123752D53E4635B3468245 /* osmesa_context.h */,
+				74CEBF644EFB46D6B28EE76F /* posix_thread.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
@@ -347,21 +295,21 @@
 		E00EF7DA280D4C4CB2EB7D11 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				F41338EDA1E74A37A4DF3E86 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */,
-				B03FEA389CE24EE09D330BE2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */,
-				934C432904044C04BC4335A9 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */,
-				A70B3D25AB8941259B11761F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */,
-				A92B8FC71F984FD396C19F3F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */,
-				BA9C39FCB87449B29AC53B6E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/context.c */,
-				D8739AEF31FF4DD693519647 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */,
-				45E7C0B95B154574A2065D5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/init.c */,
-				73596AFCE35644CE9E4C22E6 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/input.c */,
-				B2FCD2EAAEB240DA98A6C126 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */,
-				075C35B368B241BE8D882892 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */,
-				665D20EDFDFB416EB236BB5B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */,
-				0C2E592CF21346F5948C4880 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */,
-				C24FA63FF38340ABB054CC50 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */,
-				2E5CC34E9020497786638228 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/window.c */,
+				F41338EDA1E74A37A4DF3E86 /* cocoa_init.m */,
+				B03FEA389CE24EE09D330BE2 /* cocoa_joystick.m */,
+				934C432904044C04BC4335A9 /* cocoa_monitor.m */,
+				A70B3D25AB8941259B11761F /* cocoa_time.c */,
+				A92B8FC71F984FD396C19F3F /* cocoa_window.m */,
+				BA9C39FCB87449B29AC53B6E /* context.c */,
+				D8739AEF31FF4DD693519647 /* egl_context.c */,
+				45E7C0B95B154574A2065D5B /* init.c */,
+				73596AFCE35644CE9E4C22E6 /* input.c */,
+				B2FCD2EAAEB240DA98A6C126 /* monitor.c */,
+				075C35B368B241BE8D882892 /* nsgl_context.m */,
+				665D20EDFDFB416EB236BB5B /* osmesa_context.c */,
+				0C2E592CF21346F5948C4880 /* posix_thread.c */,
+				C24FA63FF38340ABB054CC50 /* vulkan.c */,
+				2E5CC34E9020497786638228 /* window.c */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -369,16 +317,16 @@
 		E17DDCECB398454CA4783E3A /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				233EE7F5F5484FE19425889D /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/KHR/khrplatform.h */,
-				4F095CE7E722440986F35700 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include/glad/glad.h */,
-				93CEE40EF6C84D42AE05FD1F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.h */,
-				A1D53EB4D0B14B1FA6704470 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.h */,
-				0632BD67990A40BF9F0BD4AB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.h */,
-				A600D0F3D084458CBE8A60E8 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.h */,
-				6DC2A4A719B64CA581CC1B31 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.h */,
-				A5F0494999E64479A21B4421 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/bone.h */,
-				C29E97BF051445919388A3B2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/stb_image.h */,
-				44EE71B4B32144B2A5616947 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/tiny_obj_loader.h */,
+				233EE7F5F5484FE19425889D /* khrplatform.h */,
+				4F095CE7E722440986F35700 /* glad.h */,
+				93CEE40EF6C84D42AE05FD1F /* Camera.h */,
+				A1D53EB4D0B14B1FA6704470 /* GLSL.h */,
+				0632BD67990A40BF9F0BD4AB /* Program.h */,
+				A600D0F3D084458CBE8A60E8 /* Shape.h */,
+				6DC2A4A719B64CA581CC1B31 /* WindowManager.h */,
+				A5F0494999E64479A21B4421 /* bone.h */,
+				C29E97BF051445919388A3B2 /* stb_image.h */,
+				44EE71B4B32144B2A5616947 /* tiny_obj_loader.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
@@ -396,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				D2407C3C12BB437F9F46222D /* CMake Rules */,
-				3ED755F2C8564AE8A5808963 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/CMakeLists.txt */,
+				3ED755F2C8564AE8A5808963 /* CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
@@ -417,7 +365,7 @@
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = 184148646D6B41F5B7564278 /* glfw */;
+			productReference = 184148646D6B41F5B7564278 /* libglfw3.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EE827E9DD72146E2805E75F5 /* particleMan */ = {
@@ -447,16 +395,12 @@
 				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 1CEC19441A9949C7A2FB50A9 /* Build configuration list for PBXProject "particleMan" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				8444A715006544BA96EEEC40 /* Debug */,
-				9B63137A9B2E44AFB4805FBB /* Release */,
-				8875E5869C1A444A80324A82 /* MinSizeRel */,
-				AD132526703E487ABC6BFD46 /* RelWithDebInfo */,
-			);
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 26AF8B43C5EB40D4AE026B6D;
 			projectDirPath = ../;
 			projectRoot = "";
@@ -483,36 +427,6 @@
 			shellScript = "make -C /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build -f /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		1760464FC4C4492088F7DB9A = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		274CA48BF6FC4AC180A2F705 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 		48878DE6FA59411A9780566B /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,36 +449,6 @@ exit 0";
 			shellScript = "make -C /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build -f /Users/sydney/Documents/CSC474/finalprog\\ -\\ ParticleMan/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		8D21AA1A158D4CB588AC6E8F = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		9104C1BAD784447E932E3FB1 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
 		EF60FB88AEF04B35A5AAC104 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,21 +467,21 @@ exit 0";
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8B3A2BAC1F64038B241154C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_init.m */,
-				FAF917212940486DA1967282 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_joystick.m */,
-				CC1D0A5A2C1A4D80B33EF23C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_monitor.m */,
-				9FD6BAFFEBA34F7194BBB5C8 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_time.c */,
-				F278C6B1394249608CEF274C /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/cocoa_window.m */,
-				A002F88EB95741FF8CA2D186 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/context.c */,
-				F5BF6E97E1BA49B8AFF630E2 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/egl_context.c */,
-				E9B8A647E2124555B07E39FB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/init.c */,
-				5E0003962BA74EE49C2966BB /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/input.c */,
-				52048A731A1C44D8BD0ABD8F /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/monitor.c */,
-				799C0F9AB01B4E66BBBF1591 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/nsgl_context.m */,
-				40001D22D5CF42AE89CEFA09 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/osmesa_context.c */,
-				19FE19C3C08641AF9A21629B /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/posix_thread.c */,
-				E488DCB323E9468FAFE212D7 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/vulkan.c */,
-				9300AFB5FDA8406C929D1956 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src/window.c */,
+				A8B3A2BAC1F64038B241154C /* cocoa_init.m in Sources */,
+				FAF917212940486DA1967282 /* cocoa_joystick.m in Sources */,
+				CC1D0A5A2C1A4D80B33EF23C /* cocoa_monitor.m in Sources */,
+				9FD6BAFFEBA34F7194BBB5C8 /* cocoa_time.c in Sources */,
+				F278C6B1394249608CEF274C /* cocoa_window.m in Sources */,
+				A002F88EB95741FF8CA2D186 /* context.c in Sources */,
+				F5BF6E97E1BA49B8AFF630E2 /* egl_context.c in Sources */,
+				E9B8A647E2124555B07E39FB /* init.c in Sources */,
+				5E0003962BA74EE49C2966BB /* input.c in Sources */,
+				52048A731A1C44D8BD0ABD8F /* monitor.c in Sources */,
+				799C0F9AB01B4E66BBBF1591 /* nsgl_context.m in Sources */,
+				40001D22D5CF42AE89CEFA09 /* osmesa_context.c in Sources */,
+				19FE19C3C08641AF9A21629B /* posix_thread.c in Sources */,
+				E488DCB323E9468FAFE212D7 /* vulkan.c in Sources */,
+				9300AFB5FDA8406C929D1956 /* window.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,14 +489,14 @@ exit 0";
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF690D8DA6F341DD9A51BF18 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/src/glad.c */,
-				AA894529EE784C6AB9705417 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Camera.cpp */,
-				EA8219CFC54A4470BD15838A /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/GLSL.cpp */,
-				B974AFD527AA4BFFB8657663 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Program.cpp */,
-				9B92A2B70D9440BCB1D4E25E /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/Shape.cpp */,
-				79A0121A7750484185CA8D19 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/WindowManager.cpp */,
-				F3878C963F18458B9F0B7239 /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/fbx_convert.cpp */,
-				D7E0B938D1AF4BC3891023BD /* /Users/sydney/Documents/CSC474/finalprog - ParticleMan/src/main.cpp */,
+				BF690D8DA6F341DD9A51BF18 /* glad.c in Sources */,
+				AA894529EE784C6AB9705417 /* Camera.cpp in Sources */,
+				EA8219CFC54A4470BD15838A /* GLSL.cpp in Sources */,
+				B974AFD527AA4BFFB8657663 /* Program.cpp in Sources */,
+				9B92A2B70D9440BCB1D4E25E /* Shape.cpp in Sources */,
+				79A0121A7750484185CA8D19 /* WindowManager.cpp in Sources */,
+				F3878C963F18458B9F0B7239 /* fbx_convert.cpp in Sources */,
+				D7E0B938D1AF4BC3891023BD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +548,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -673,7 +557,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -695,20 +584,55 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/include\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "    ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++0x",
+					"-Wall",
+					"-pedantic",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Debug/libglfw3.a\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\"",
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -721,19 +645,35 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -fPIC  ";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+				);
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -744,7 +684,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -753,7 +693,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -764,7 +709,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -773,7 +718,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -784,7 +734,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -793,7 +743,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -813,7 +768,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -822,7 +777,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -835,20 +795,56 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/include\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "    -DNDEBUG  ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++0x",
+					"-Wall",
+					"-pedantic",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/MinSizeRel/libglfw3.a\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\"",
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -859,7 +855,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -868,7 +864,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -879,7 +880,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -888,7 +889,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -901,20 +907,56 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/include\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "       -DNDEBUG  ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic        -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++0x",
+					"-Wall",
+					"-pedantic",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/RelWithDebInfo/libglfw3.a\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\"",
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -927,9 +969,17 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "   -fPIC  ";
@@ -939,7 +989,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -950,7 +1005,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -959,7 +1014,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -970,7 +1030,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -979,7 +1039,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -990,7 +1055,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -999,7 +1064,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -1021,20 +1091,56 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"","\"/Applications/Autodesk/FBX SDK/2019.0/include\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glm-0.9.8.3\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/include\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "    -DNDEBUG  ";
-				OTHER_CPLUSPLUSFLAGS = " -std=c++0x -Wall -pedantic     -DNDEBUG  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  \"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a\" \"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\" -framework OpenGL -framework Cocoa -framework IOKit -framework CoreVideo -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-std=c++0x",
+					"-Wall",
+					"-pedantic",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src/Release/libglfw3.a\"",
+					"\"/Applications/Autodesk/FBX SDK/2019.0/lib/clang/release/libfbxsdk.a\"",
+					"-framework",
+					OpenGL,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = particleMan;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -1045,7 +1151,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1054,7 +1160,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -1065,7 +1176,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1074,7 +1185,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -1085,7 +1201,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1094,7 +1210,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
@@ -1114,7 +1235,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1123,7 +1244,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -1134,7 +1260,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1143,7 +1269,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -1154,7 +1285,7 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
@@ -1163,7 +1294,12 @@ exit 0";
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -1176,19 +1312,35 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC  ";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+				);
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -1201,19 +1353,35 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"","\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"");
+				HEADER_SEARCH_PATHS = (
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glad/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/include\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/ext/glfw-3.3-prerelease/src\"",
+					"\"/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src\"",
+				);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC  ";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+				);
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
 				SYMROOT = "/Users/sydney/Documents/CSC474/finalprog - ParticleMan/build/ext/glfw-3.3-prerelease/debug/src";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
