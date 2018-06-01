@@ -172,39 +172,39 @@ public:
         //generate vertex buffer to hand off to OGL
         glGenBuffers(1, &VertexBufferID);
         //set the current state to focus on our vertex buffer
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, VertexBufferID);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
         
         
-//        GLfloat mesh_floats[mesh_vertices_count];
-//
-//        for(int i=0; i<mesh_vertices_count/3; i++){
-//            mesh_floats[i*3+0] = mesh_vertices[i][0];
-//            mesh_floats[i*3+1] = mesh_vertices[i][1];
-//            mesh_floats[i*3+2] = mesh_vertices[i][2];
-//        }
-//        for (int i = 0; i < mesh_vertices_count; i++)
-//            mesh_floats[i] *=2;
-//
-//
-//
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
-//        glEnableVertexAttribArray(0);
-//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-        
-        vector<vec3> pos;
-        vector<unsigned int> imat;
-        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
-        size_stick = pos.size();
-        //actually memcopy the data - only do this once
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+        GLfloat mesh_floats[mesh_vertices_count];
+
+        for(int i=0; i<mesh_vertices_count/3; i++){
+            mesh_floats[i*3+0] = mesh_vertices[i][0];
+            mesh_floats[i*3+1] = mesh_vertices[i][1];
+            mesh_floats[i*3+2] = mesh_vertices[i][2];
+        }
+        for (int i = 0; i < mesh_vertices_count; i++)
+            mesh_floats[i] *=2;
+
+
+
+        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-        //indices of matrix:
-        glGenBuffers(1, &VertexBufferIDimat);
-        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
-        glEnableVertexAttribArray(1);
-        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
+        
+//        vector<vec3> pos;
+//        vector<unsigned int> imat;
+//        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
+//        size_stick = pos.size();
+//        //actually memcopy the data - only do this once
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(0);
+//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+//        //indices of matrix:
+//        glGenBuffers(1, &VertexBufferIDimat);
+//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(1);
+//        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
 
         
         glBindVertexArray(0);
@@ -274,15 +274,14 @@ public:
         skeleton->bind();
         //send the matrices to the shaders
         glBindVertexArray(VertexArrayID);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, VertexBufferID);
 
         glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, -1.0f, -8.0f));
         glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(0.01f, 0.01f, 0.01f));
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
-    
-        glDrawArrays(GL_LINES, 4, size_stick-4);
+        glDrawArrays(GL_TRIANGLES,0,mesh_vertices_count/9);
+//        glDrawArrays(GL_LINES, 2, size_stick-2);
         glBindVertexArray(0);
         skeleton->unbind();
 
