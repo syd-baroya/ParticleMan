@@ -49,54 +49,6 @@ mat4 linint_between_two_orientations(vec3 ez_aka_lookto_1, vec3 ey_aka_up_1, vec
     return mt;
 }
 
-//*************************************************************************************************
-//
-//            TEST YOUR ANIMATION
-//
-//*************************************************************************************************
-mat4 test_animation()
-{
-    static float t = 0.0;
-    t += 0.01;
-    //float f = (sin(t)+1.)/2.0;//
-    mat4 mt;
-    vec3 ez1, ey1, ez2, ey2, ez3, ey3, ez4, ey4;
-    
-    ez1 = vec3(0, 0, 1);
-    ey1 = vec3(0, 1, 0);
-    
-    ez2 = vec3(0.157114, -0.0207484, 0.987362);
-    ey2 = vec3(-0.978864, 0.129268, 0.158478);
-    
-    ez3 = vec3(0.799965, -0.0758681, 0.595231);
-    ey3 = vec3(-0.356247, 0.73818, 0.572869);
-    
-    ez4 = vec3(0.883246, -0.0758681, -0.462732);
-    ey4 = vec3(0.361728, 0.73818, 0.569423);
-    
-    
-    
-    if (t <= 1)                    mt = linint_between_two_orientations(ez1, ey1, ez2, ey2, t);
-    else if (t <= 2)            mt = linint_between_two_orientations(ez2, ey2, ez3, ey3, t - 1.);
-    else if (t <= 3)            mt = linint_between_two_orientations(ez3, ey3, ez4, ey4, t - 2.);
-    else if (t <= 4)            mt = linint_between_two_orientations(ez4, ey4, ez1, ey1, t - 3.);
-    else
-    {
-        t = 0;
-        mt = linint_between_two_orientations(ez1, ey1, ez2, ey2, t);
-    }
-    
-    
-    return mt;
-}
-//*************************************************************************************************
-//
-//            END - TEST YOUR ANIMATION
-//
-//*************************************************************************************************
-
-
-
 
 double get_last_elapsed_time() {
 	static double lasttime = glfwGetTime();
