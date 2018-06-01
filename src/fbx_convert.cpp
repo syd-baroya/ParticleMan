@@ -12,6 +12,17 @@ using namespace std;
 #include "bone.h"
 using namespace glm;
 
+void ProcessMesh(FbxNode* inNode, int** mesh_vertices, int *mesh_vertices_count)
+{
+    FbxMesh* currMesh = inNode->GetMesh();
+    int* temp = currMesh->GetPolygonVertices();
+    *mesh_vertices_count = currMesh->GetPolygonVertexCount();
+    *mesh_vertices = (int*) malloc(*mesh_vertices_count*sizeof(int));
+    for(int i = 0; i < *mesh_vertices_count; i++)
+        *mesh_vertices[i] = temp[i];
+}
+
+
 /* Tab character ("\t") counter */
 int numTabs = 0;
 
@@ -722,7 +733,7 @@ void DisplayListCurveKeys(FbxAnimCurve* pCurve, FbxProperty* pProperty)
  * and prints its contents in an xml format to stdout.
  */
 
-int readtobone(string file, all_animations *all_animation,bone **proot)
+int readtobone(string file, all_animations *all_animation,bone **proot, int** mesh_vertices, int* mesh_vertices_count)
 {
     
     //ifstream fileHandle("fgdfg");
@@ -778,6 +789,9 @@ int readtobone(string file, all_animations *all_animation,bone **proot)
     // Note that we are not printing the root node because it should
     // not contain any attributes.
     FbxNode* lRootNode = lScene->GetRootNode();
+    
+    ProcessMesh(lRootNode, mesh_vertices, mesh_vertices_count);
+    
     int count_bones=0;
     int child_count = lRootNode->GetChildCount();
     for (int i = 0; i < child_count; i++)//nur einen knochen machen

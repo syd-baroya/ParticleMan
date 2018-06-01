@@ -203,7 +203,13 @@ public:
         shape->resize();
         shape->init();
         
-        readtobone("../../resources/pMan.fbx",&all_animation,&root);
+        int* mesh_vertices;
+        int mesh_vertices_count;
+        
+        readtobone("../../resources/pMan.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
+        
+        cout<<mesh_vertices_count<<endl;
+        
         root->set_animations(&all_animation,animmat,animmatsize);
         
         glGenVertexArrays(1, &VertexArrayID);
