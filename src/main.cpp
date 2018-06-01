@@ -6,6 +6,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glad/glad.h>
+#include <fbxsdk.h>
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
@@ -193,22 +194,23 @@ public:
 	bone *root = NULL;
 	int size_stick = 0;
     all_animations all_animation;
+    FbxVector4* mesh_vertices;
+    int mesh_vertices_count;
     
 	void initGeom(const std::string& resourceDirectory) {
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
-        shape = make_shared<Shape>();
-        shape->loadMesh(resourceDirectory + "/pMan.obj");
-        shape->resize();
-        shape->init();
+//        shape = make_shared<Shape>();
+//        shape->loadMesh(resourceDirectory + "/ballin.obj");
+//        shape->resize();
+//        shape->init();
+//
+
         
-        int* mesh_vertices;
-        int mesh_vertices_count;
+        readtobone("../../resources/ballin.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
         
-        readtobone("../../resources/pMan.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
-        
-        cout<<mesh_vertices_count<<endl;
+
         
         root->set_animations(&all_animation,animmat,animmatsize);
         
@@ -218,7 +220,24 @@ public:
         //generate vertex buffer to hand off to OGL
         glGenBuffers(1, &VertexBufferID);
         //set the current state to focus on our vertex buffer
-        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, VertexBufferID);
+        
+        
+//        GLfloat mesh_floats[mesh_vertices_count];
+//
+//        for(int i=0; i<mesh_vertices_count/3; i++){
+//            mesh_floats[i*3+0] = mesh_vertices[i][0];
+//            mesh_floats[i*3+1] = mesh_vertices[i][1];
+//            mesh_floats[i*3+2] = mesh_vertices[i][2];
+//        }
+//        for (int i = 0; i < mesh_vertices_count; i++)
+//            mesh_floats[i] *=2;
+//
+//
+//
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
+//        glEnableVertexAttribArray(0);
+//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
         
         vector<vec3> pos;
         vector<unsigned int> imat;
@@ -303,12 +322,14 @@ public:
         skeleton->bind();
         //send the matrices to the shaders
         glBindVertexArray(VertexArrayID);
-        
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, VertexBufferID);
+
         glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, -1.0f, -8.0f));
         glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(0.01f, 0.01f, 0.01f));
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
+    
         glDrawArrays(GL_LINES, 4, size_stick-4);
         glBindVertexArray(0);
         skeleton->unbind();

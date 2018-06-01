@@ -12,14 +12,13 @@ using namespace std;
 #include "bone.h"
 using namespace glm;
 
-void ProcessMesh(FbxNode* inNode, int** mesh_vertices, int *mesh_vertices_count)
+void ProcessMesh(FbxNode* inNode, FbxVector4** mesh_vertices, int *mesh_vertices_count)
 {
     FbxMesh* currMesh = inNode->GetMesh();
-    int* temp = currMesh->GetPolygonVertices();
-    *mesh_vertices_count = currMesh->GetPolygonVertexCount();
-    *mesh_vertices = (int*) malloc(*mesh_vertices_count*sizeof(int));
-    for(int i = 0; i < *mesh_vertices_count; i++)
-        *mesh_vertices[i] = temp[i];
+    *mesh_vertices_count = currMesh->GetControlPointsCount();
+    currMesh->InitControlPoints(*mesh_vertices_count);
+    *mesh_vertices = currMesh->GetControlPoints();
+
 }
 
 
@@ -184,7 +183,7 @@ void CalcTransRotAnim(all_animations *all_animation, FbxScene* lScene, FbxNode* 
     int keyframecount = end.GetFrameCount(FbxTime::eFrames24) - start.GetFrameCount(FbxTime::eFrames24) + 1;
     
     const char* nodeName = lNode->GetName();
-        cout << endl << "\t" << "bone name: " << nodeName << endl << endl;
+//        cout << endl << "\t" << "bone name: " << nodeName << endl << endl;
     
     animation_per_bone anim;
     anim.bone = nodeName;
@@ -733,7 +732,7 @@ void DisplayListCurveKeys(FbxAnimCurve* pCurve, FbxProperty* pProperty)
  * and prints its contents in an xml format to stdout.
  */
 
-int readtobone(string file, all_animations *all_animation,bone **proot, int** mesh_vertices, int* mesh_vertices_count)
+int readtobone(string file, all_animations *all_animation,bone **proot, FbxVector4** mesh_vertices, int* mesh_vertices_count)
 {
     
     //ifstream fileHandle("fgdfg");
@@ -790,7 +789,7 @@ int readtobone(string file, all_animations *all_animation,bone **proot, int** me
     // not contain any attributes.
     FbxNode* lRootNode = lScene->GetRootNode();
     
-    ProcessMesh(lRootNode, mesh_vertices, mesh_vertices_count);
+    ProcessMesh(lRootNode->GetChild(0), mesh_vertices, mesh_vertices_count);
     
     int count_bones=0;
     int child_count = lRootNode->GetChildCount();
