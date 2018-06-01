@@ -52,20 +52,20 @@ mat4 linint_between_two_orientations(vec3 ez_aka_lookto_1, vec3 ey_aka_up_1, vec
 
 
 double get_last_elapsed_time() {
-	static double lasttime = glfwGetTime();
-	double actualtime = glfwGetTime();
-	double difference = actualtime - lasttime;
-	lasttime = actualtime;
-	return difference;
+    static double lasttime = glfwGetTime();
+    double actualtime = glfwGetTime();
+    double difference = actualtime - lasttime;
+    lasttime = actualtime;
+    return difference;
 }
 
 class Application : public EventCallbacks {
 public:
-	WindowManager *windowManager = nullptr;
+    WindowManager *windowManager = nullptr;
     Camera *camera = nullptr;
 
     std::shared_ptr<Shape> shape;
-	std::shared_ptr<Program> skeleton;
+    std::shared_ptr<Program> skeleton;
     
     // Contains vertex information for OpenGL
     GLuint VertexArrayID;
@@ -92,8 +92,8 @@ public:
         delete camera;
     }
 
-	void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
-		// Movement
+    void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods) {
+        // Movement
         if (key == GLFW_KEY_W && action != GLFW_REPEAT) camera->vel.z = (action == GLFW_PRESS) * -0.2f;
         if (key == GLFW_KEY_S && action != GLFW_REPEAT) camera->vel.z = (action == GLFW_PRESS) * 0.2f;
         if (key == GLFW_KEY_A && action != GLFW_REPEAT) camera->vel.x = (action == GLFW_PRESS) * -0.2f;
@@ -116,9 +116,9 @@ public:
             glfwSetInputMode(window, GLFW_CURSOR, mouseCaptured ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
             resetMouseMoveInitialValues(window);
         }
-	}
+    }
 
-	void mouseCallback(GLFWwindow *window, int button, int action, int mods) {
+    void mouseCallback(GLFWwindow *window, int button, int action, int mods) {
         mousePressed = (action != GLFW_RELEASE);
         if (action == GLFW_PRESS) {
             resetMouseMoveInitialValues(window);
@@ -133,7 +133,7 @@ public:
         }
     }
 
-	void resizeCallback(GLFWwindow *window, int in_width, int in_height) { }
+    void resizeCallback(GLFWwindow *window, int in_width, int in_height) { }
     
     // Reset mouse move initial position and rotation
     void resetMouseMoveInitialValues(GLFWwindow *window) {
@@ -143,13 +143,13 @@ public:
         mouseMoveInitialCameraRot = camera->rot;
     }
 
-	bone *root = NULL;
-	int size_stick = 0;
+    bone *root = NULL;
+    int size_stick = 0;
     all_animations all_animation;
     FbxVector4* mesh_vertices;
     int mesh_vertices_count;
     
-	void initGeom(const std::string& resourceDirectory) {
+    void initGeom(const std::string& resourceDirectory) {
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
@@ -208,13 +208,13 @@ public:
 
         
         glBindVertexArray(0);
-	}
-	
-	void init(const std::string& resourceDirectory) {
-		GLSL::checkVersion();
+    }
+    
+    void init(const std::string& resourceDirectory) {
+        GLSL::checkVersion();
 
-		// Enable z-buffer test.
-		glEnable(GL_DEPTH_TEST);
+        // Enable z-buffer test.
+        glEnable(GL_DEPTH_TEST);
         
         
         skeleton = std::make_shared<Program>();
@@ -226,7 +226,7 @@ public:
             exit(1);
         }
        
-	}
+    }
     
     glm::mat4 getPerspectiveMatrix() {
         float fov = 3.14159f / 4.0f;
@@ -234,7 +234,7 @@ public:
         return glm::perspective(fov, aspect, 0.01f, 10000.0f);
     }
 
-	void render() {
+    void render() {
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         double frametime = get_last_elapsed_time();
@@ -257,12 +257,12 @@ public:
         }
         root->play_animation(frame,"Take 001");    //name of current animation
 
-		// Clear framebuffer.
-		glClearColor(0.3f, 0.7f, 0.8f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        // Clear framebuffer.
+        glClearColor(0.3f, 0.7f, 0.8f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		// Create the matrix stacks.
-		glm::mat4 V, M, P;
+        // Create the matrix stacks.
+        glm::mat4 V, M, P;
         P = getPerspectiveMatrix();
         V = camera->getViewMatrix();
         M = glm::mat4(1);
@@ -286,41 +286,41 @@ public:
         skeleton->unbind();
 
         
-	}
+    }
 };
 
 int main(int argc, char **argv) {
-	std::string resourceDir = "../../resources";
-	if (argc >= 2) {
-		resourceDir = argv[1];
-	}
+    std::string resourceDir = "../../resources";
+    if (argc >= 2) {
+        resourceDir = argv[1];
+    }
 
-	Application *application = new Application();
+    Application *application = new Application();
 
     // Initialize window.
-	WindowManager * windowManager = new WindowManager();
-	windowManager->init(800, 600);
-	windowManager->setEventCallbacks(application);
-	application->windowManager = windowManager;
+    WindowManager * windowManager = new WindowManager();
+    windowManager->init(800, 600);
+    windowManager->setEventCallbacks(application);
+    application->windowManager = windowManager;
 
-	// Initialize scene.
-	application->init(resourceDir);
-	application->initGeom(resourceDir);
+    // Initialize scene.
+    application->init(resourceDir);
+    application->initGeom(resourceDir);
     
-	// Loop until the user closes the window.
-	while (!glfwWindowShouldClose(windowManager->getHandle())) {
+    // Loop until the user closes the window.
+    while (!glfwWindowShouldClose(windowManager->getHandle())) {
         // Update camera position.
         application->camera->update();
-		// Render scene.
-		application->render();
+        // Render scene.
+        application->render();
 
-		// Swap front and back buffers.
-		glfwSwapBuffers(windowManager->getHandle());
-		// Poll for and process events.
-		glfwPollEvents();
-	}
+        // Swap front and back buffers.
+        glfwSwapBuffers(windowManager->getHandle());
+        // Poll for and process events.
+        glfwPollEvents();
+    }
 
-	// Quit program.
-	windowManager->shutdown();
-	return 0;
+    // Quit program.
+    windowManager->shutdown();
+    return 0;
 }
