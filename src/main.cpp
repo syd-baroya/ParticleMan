@@ -303,9 +303,8 @@ public:
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
-        shape->draw(skeleton);
-//        glDrawArrays(GL_LINES, 4, size_stick-4);
-//        glBindVertexArray(0);
+        glDrawArrays(GL_LINES, 4, size_stick-4);
+        glBindVertexArray(0);
         skeleton->unbind();
 
         
