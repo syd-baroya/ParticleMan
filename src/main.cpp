@@ -18,38 +18,8 @@
 #include "Camera.h"
 #include "bone.h"
 
-
 using namespace std;
 using namespace glm;
-
-mat4 linint_between_two_orientations(vec3 ez_aka_lookto_1, vec3 ey_aka_up_1, vec3 ez_aka_lookto_2, vec3 ey_aka_up_2, float t)
-{
-    mat4 m1, m2;
-    quat q1, q2;
-    vec3 ex, ey, ez;
-    ey = ey_aka_up_1;
-    ez = ez_aka_lookto_1;
-    ex = cross(ey, ez);
-    m1[0][0] = ex.x;        m1[0][1] = ex.y;        m1[0][2] = ex.z;        m1[0][3] = 0;
-    m1[1][0] = ey.x;        m1[1][1] = ey.y;        m1[1][2] = ey.z;        m1[1][3] = 0;
-    m1[2][0] = ez.x;        m1[2][1] = ez.y;        m1[2][2] = ez.z;        m1[2][3] = 0;
-    m1[3][0] = 0;            m1[3][1] = 0;            m1[3][2] = 0;            m1[3][3] = 1.0f;
-    ey = ey_aka_up_2;
-    ez = ez_aka_lookto_2;
-    ex = cross(ey, ez);
-    m2[0][0] = ex.x;        m2[0][1] = ex.y;        m2[0][2] = ex.z;        m2[0][3] = 0;
-    m2[1][0] = ey.x;        m2[1][1] = ey.y;        m2[1][2] = ey.z;        m2[1][3] = 0;
-    m2[2][0] = ez.x;        m2[2][1] = ez.y;        m2[2][2] = ez.z;        m2[2][3] = 0;
-    m2[3][0] = 0;            m2[3][1] = 0;            m2[3][2] = 0;            m2[3][3] = 1.0f;
-    q1 = quat(m1);
-    q2 = quat(m2);
-    quat qt = slerp(q1, q2, t); //<---
-    qt = normalize(qt);
-    mat4 mt = mat4(qt);
-    //mt = transpose(mt);         //<---
-    return mt;
-}
-
 
 double get_last_elapsed_time() {
     static double lasttime = glfwGetTime();
@@ -66,6 +36,9 @@ public:
 
     std::shared_ptr<Shape> shape;
     std::shared_ptr<Program> skeleton;
+    std::shared_ptr<Program> progParticles;
+    
+    GLuint Texture;
     
     // Contains vertex information for OpenGL
     GLuint VertexArrayID;
@@ -83,6 +56,13 @@ public:
     //animation matrices:
     mat4 animmat[200];
     int animmatsize=0;
+    
+    glm::vec3 particle_positions[200];
+    glm::vec3 particle_velocities[200];
+    vector<vec3> bone_positions;
+    
+    const float MODEL_SCALE_FACTOR = 0.01;
+
 
     Application() {
         camera = new Camera();
@@ -149,16 +129,43 @@ public:
     FbxVector4* mesh_vertices;
     int mesh_vertices_count;
     
+    
     void initGeom(const std::string& resourceDirectory) {
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
-//        shape = make_shared<Shape>();
-//        shape->loadMesh(resourceDirectory + "/ballin.obj");
-//        shape->resize();
-//        shape->init();
-//
+        shape = make_shared<Shape>();
+        shape->loadMesh(resourceDirectory + "/1d_square.obj");
+        shape->resize();
+        shape->init();
 
+        int width, height, channels;
+        char filepath[1000];
+        //texture 1
+        string str = resourceDirectory + "/star.png";
+        strcpy(filepath, str.c_str());
+        unsigned char* data = stbi_load(filepath, &width, &height, &channels, 4);
+        glGenTextures(1, &Texture);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, Texture);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        GLuint Tex1Location = glGetUniformLocation(progParticles->getPID(), "tex");//tex, tex2... sampler in the fragment shader
+        // Then bind the uniform samplers to texture units:
+        glUseProgram(progParticles->getPID());
+        glUniform1i(Tex1Location, 0);
+        
+        for(int i = 0; i < 200; i ++)
+        {
+            float y_velocity =  0.05 + ((float)rand() / RAND_MAX / 8);
+            particle_velocities[i] = vec3(0, -1 * y_velocity, 0);
+            //cout << "velocity: " << y_velocity << endl;
+        }
         
         readtobone("../../resources/ballin.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
         
@@ -175,36 +182,52 @@ public:
         glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
         
         
-        GLfloat mesh_floats[mesh_vertices_count];
+        GLfloat mesh_floats[mesh_vertices_count*3];
 
-        for(int i=0; i<mesh_vertices_count/3; i++){
+        for(int i=0; i<mesh_vertices_count; i++)
+        {
+            cout << mesh_vertices[i][0] << endl;
             mesh_floats[i*3+0] = mesh_vertices[i][0];
             mesh_floats[i*3+1] = mesh_vertices[i][1];
             mesh_floats[i*3+2] = mesh_vertices[i][2];
         }
-        for (int i = 0; i < mesh_vertices_count; i++)
-            mesh_floats[i] *=2;
+        for (int i = 0; i < mesh_vertices_count*3; i++)
+            mesh_floats[i] *=200;
 
 
 
-        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-        
-//        vector<vec3> pos;
-//        vector<unsigned int> imat;
-//        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
-//        size_stick = pos.size();
-//        //actually memcopy the data - only do this once
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
 //        glEnableVertexAttribArray(0);
 //        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-//        //indices of matrix:
-//        glGenBuffers(1, &VertexBufferIDimat);
-//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
-//        glEnableVertexAttribArray(1);
-//        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
+        
+        vector<vec3> pos;
+        vector<unsigned int> imat;
+        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
+        bone_positions = pos;
+        size_stick = pos.size();
+        //actually memcopy the data - only do this once
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        //indices of matrix:
+        glGenBuffers(1, &VertexBufferIDimat);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
+        glEnableVertexAttribArray(1);
+        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
+        
+        for (int i = 0; i < 200; i++)
+        {
+            int joint = rand() % 198;            
+            particle_positions[i].x = animmat[joint][3][0];
+            particle_positions[i].y = animmat[joint][3][1];
+            particle_positions[i].z = animmat[joint][3][2];
+            particle_positions[i][0] *= MODEL_SCALE_FACTOR;
+            particle_positions[i][1] *= MODEL_SCALE_FACTOR;
+            particle_positions[i][2] *= MODEL_SCALE_FACTOR;
+            
+            cout << "POS: " << particle_positions[i].x << " " << particle_positions[i].y << " " << particle_positions[i].z << endl;
+        }
 
         
         glBindVertexArray(0);
@@ -216,6 +239,26 @@ public:
         // Enable z-buffer test.
         glEnable(GL_DEPTH_TEST);
         
+        glEnable(GL_CULL_FACE);
+        glFrontFace(GL_CCW);
+
+        //transparency
+        glEnable(GL_BLEND);
+        //next function defines how to mix the background color with the transparent pixel in the foreground.
+        //This is the standard:
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        
+        progParticles = make_shared<Program>();
+        progParticles->setVerbose(true);
+        progParticles->setShaderNames(resourceDirectory + "/particle.vert", resourceDirectory + "/particle.frag");
+        if(!progParticles->init())
+        {
+            std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
+            exit(1);
+        }
+        progParticles->addAttribute("vertPos");
+        progParticles->addAttribute("vertNor");
+        progParticles->addAttribute("vertTex");
         
         skeleton = std::make_shared<Program>();
         skeleton->setVerbose(true);
@@ -276,14 +319,46 @@ public:
         glBindVertexArray(VertexArrayID);
 
         glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, -1.0f, -8.0f));
-        glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(0.01f, 0.01f, 0.01f));
+        glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
-        glDrawArrays(GL_TRIANGLES,0,mesh_vertices_count/9);
-//        glDrawArrays(GL_LINES, 2, size_stick-2);
-        glBindVertexArray(0);
+//        glDrawArrays(GL_TRIANGLES,0,mesh_vertices_count/9);
+        glDrawArrays(GL_LINES, 2, size_stick-2);
+        //glBindVertexArray(0);
         skeleton->unbind();
+        
+        progParticles->bind();
+        glUniformMatrix4fv(progParticles->getUniform("P"), 1, GL_FALSE, &P[0][0]);
+
+        mat4 faceTheCam = glm::rotate(glm::mat4(1), camera->rot.y, glm::vec3(0, 1, 0));
+//        M = glm::translate(glm::mat4(1), vec3(0,0,-1));
+//        glUniformMatrix4fv(progParticles->getUniform("M"), 1, GL_FALSE, &M[0][0]);
+//        glUniformMatrix4fv(progParticles->getUniform("V"), 1, GL_FALSE, &V[0][0]);
+//        shape->draw(progParticles);
+        glBindTexture(GL_TEXTURE_2D, Texture);
+        for(int i = 0; i < 200; i++)
+        {
+            if(particle_positions[i].y > 0)
+                particle_positions[i].y += 0.1 * particle_velocities[i].y;
+            else
+            {
+                int joint = rand() % 198;
+                particle_positions[i].x = animmat[joint][3][0];
+                particle_positions[i].y = animmat[joint][3][1];
+                particle_positions[i].z = animmat[joint][3][2];
+                particle_positions[i][0] *= MODEL_SCALE_FACTOR;
+                particle_positions[i][1] *= MODEL_SCALE_FACTOR;
+                particle_positions[i][2] *= MODEL_SCALE_FACTOR;
+            }
+            
+            M = glm::translate(TransZ, particle_positions[i]) * faceTheCam;
+            M = scale(M, vec3(0.01, 0.01, 0.01));
+            progParticles->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+            progParticles->setFloat("fade", particle_positions[i].y);
+            shape->draw(progParticles, true);
+        }
+        progParticles->unbind();
 
         
     }

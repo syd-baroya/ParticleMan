@@ -48,24 +48,23 @@ public:
         for (int i = 0; i < animation.size(); i++)
             if (animation[i]->name == animationname)
             {
-                if (animation[i]->keyframes.size() > keyframenumber)
+                keyframenumber = keyframenumber % animation[i]->keyframes.size();
+                quat q = animation[i]->keyframes[keyframenumber].quaternion;
+                vec3 tr = animation[i]->keyframes[keyframenumber].translation;
+                mat4 M = mat4(q);
+                mat4 T = translate(mat4(1), tr);
+                M = T * M;
+                if (mat)
                 {
-                    quat q = animation[i]->keyframes[keyframenumber].quaternion;
-                    vec3 tr = animation[i]->keyframes[keyframenumber].translation;
-                    mat4 M = mat4(q);
-                    mat4 T = translate(mat4(1), tr);
-                    M = T * M;
-                    if (mat)
-                    {
-                        mat4 parentmat = mat4(1);
-                        if (parent)
-                            parentmat = *parent->mat;
-                        *mat = parentmat * M;
-                    }
+                    mat4 parentmat = mat4(1);
+                    if (parent)
+                        parentmat = *parent->mat;
+                    *mat = parentmat * M;
                 }
-                else
-                    *mat = mat4(1);
             }
+            else
+                *mat = mat4(1);
+        
         for (int i = 0; i < kids.size(); i++)
             kids[i]->play_animation(keyframenumber,animationname);
     }
