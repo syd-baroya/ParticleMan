@@ -21,7 +21,7 @@
 #include "bone.h"
 
 #define AMPLITUDE_FACTOR 0.005
-#define NUM_PARTICLES 300
+#define NUM_PARTICLES 400
 #define GRAVITY -2
 
 using namespace std;
@@ -54,11 +54,17 @@ public:
     WindowManager *windowManager = nullptr;
     Camera *camera = nullptr;
 
-    std::shared_ptr<Shape> shape;
+    std::shared_ptr<Shape> particleShape;
+    shared_ptr<Shape> skySphere;
+    shared_ptr<Shape> floor;
     std::shared_ptr<Program> skeleton;
     std::shared_ptr<Program> progParticles;
+    std::shared_ptr<Program> progSky;
+    std::shared_ptr<Program> progFloor;
     
-    GLuint Texture;
+    
+    GLuint particleTex;
+    GLuint skyTex;
     
     // Contains vertex information for OpenGL
     GLuint VertexArrayID;
@@ -163,31 +169,65 @@ public:
                                      GRAVITY - (pow(2 * (float) generator() / (generator.max()), 2)),
                                            1 - (pow(2 * (float) generator() / (generator.max()), 2)));
         
-        shape = make_shared<Shape>();
-        shape->loadMesh(resourceDirectory + "/1d_square.obj");
-        shape->resize();
-        shape->init();
+        // Initialize mesh.
+        skySphere = make_shared<Shape>();
+        skySphere->loadMesh(resourceDirectory + "/sphere.obj");
+        skySphere->resize();
+        skySphere->init();
+        
+        // Initialize mesh.
+        floor = make_shared<Shape>();
+        floor->loadMesh(resourceDirectory + "/multisquare.obj");
+        floor->resize();
+        floor->init();
+        
+        particleShape = make_shared<Shape>();
+        particleShape->loadMesh(resourceDirectory + "/1d_square.obj");
+        particleShape->resize();
+        particleShape->init();
 
         int width, height, channels;
         char filepath[1000];
-        //texture 1
+        
+        //particle texture
         string str = resourceDirectory + "/orb.jpg";
         strcpy(filepath, str.c_str());
         unsigned char* data = stbi_load(filepath, &width, &height, &channels, 4);
-        glGenTextures(1, &Texture);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, Texture);
+        glGenTextures(1, &particleTex);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, particleTex);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
-
-        GLuint Tex1Location = glGetUniformLocation(progParticles->getPID(), "tex");//tex, tex2... sampler in the fragment shader
+        
+        //sky texture
+        str = resourceDirectory + "/obsidian.jpg";
+        strcpy(filepath, str.c_str());
+        data = stbi_load(filepath, &width, &height, &channels, 4);
+        glGenTextures(1, &skyTex);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, skyTex);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+        
+        GLuint Tex1Location = glGetUniformLocation(progParticles->getPID(), "tex");
+        GLuint Tex2Location = glGetUniformLocation(progSky->getPID(), "tex");
         // Then bind the uniform samplers to texture units:
+        
         glUseProgram(progParticles->getPID());
         glUniform1i(Tex1Location, 0);
+        glUseProgram(progSky->getPID());
+        glUniform1i(Tex2Location, 1);
+        
+//        glEnable(GL_BLEND);
+//        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
     
         
@@ -272,6 +312,35 @@ public:
         //This is the standard:
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
+        // Initialize the GLSL program.
+        progSky = make_shared<Program>();
+        progSky->setVerbose(true);
+        progSky->setShaderNames(resourceDirectory + "/sky.vert", resourceDirectory + "/sky.frag");
+        if (! progSky->init())
+        {
+            std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
+            exit(1);
+        }
+        progSky->init();
+        progSky->addAttribute("vertPos");
+        progSky->addAttribute("vertNor");
+        progSky->addAttribute("vertTex");
+        
+        // Initialize the GLSL program.
+        progFloor = make_shared<Program>();
+        progFloor->setVerbose(true);
+        progFloor->setShaderNames(resourceDirectory + "/floor.vert", resourceDirectory + "/floor.frag");
+        if (! progFloor->init())
+        {
+            std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
+            exit(1);
+        }
+        progFloor->init();
+        progFloor->addUniform("camPos");
+        progFloor->addAttribute("vertPos");
+        progFloor->addAttribute("vertNor");
+        progFloor->addAttribute("vertTex");
+        
         progParticles = make_shared<Program>();
         progParticles->setVerbose(true);
         progParticles->setShaderNames(resourceDirectory + "/particle.vert", resourceDirectory + "/particle.frag");
@@ -352,15 +421,38 @@ public:
         //glBindVertexArray(0);
         skeleton->unbind();
         
+        static float angle = 0.0;
+        angle += 0.0001;
+        progSky->bind();
+        mat4 Rx = glm::rotate(glm::mat4(1), 3.14159f/2.0f,glm::vec3(1, 0, 0));
+        mat4 Ry = glm::rotate(glm::mat4(1), angle, glm::vec3(0, 1, 0));
+        mat4 makeItBig = glm::scale(glm::mat4(1), glm::vec3(50, 50, 50));
+        mat4 followTheCam = glm::translate(glm::mat4(1), vec3(-camera->pos.x, 0, -camera->pos.z));
+        M = followTheCam * Ry * Rx * makeItBig;
+        glFrontFace(GL_CW);
+        progSky->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+        skySphere->draw(progSky, true);
+        
+        progSky->unbind();
+        
+        progFloor->bind();
+        M = glm::translate(mat4(1), vec3(0, 0.0, 0)) * followTheCam * Ry*  Rx * makeItBig;
+        progFloor->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+        progFloor->setVector3("camPos", camera->pos.x, camera->pos.y, camera->pos.z);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, particleTex);
+        floor->draw(progFloor, false);
+        progFloor->unbind();
+        
+        glFrontFace(GL_CCW);
+        
         progParticles->bind();
         glUniformMatrix4fv(progParticles->getUniform("P"), 1, GL_FALSE, &P[0][0]);
 
         mat4 faceTheCam = glm::rotate(glm::mat4(1), camera->rot.y, glm::vec3(0, 1, 0));
-//        M = glm::translate(glm::mat4(1), vec3(0,0,-1));
-//        glUniformMatrix4fv(progParticles->getUniform("M"), 1, GL_FALSE, &M[0][0]);
-//        glUniformMatrix4fv(progParticles->getUniform("V"), 1, GL_FALSE, &V[0][0]);
-//        shape->draw(progParticles);
-        glBindTexture(GL_TEXTURE_2D, Texture);
+
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, particleTex);
         for(int i = 0; i < NUM_PARTICLES; i++)
         {
             if(particle_positions[i].y > 0)
@@ -383,7 +475,7 @@ public:
             M = scale(M, vec3(0.01, 0.01, 0.01));
             progParticles->setMVP(&M[0][0], &V[0][0], &P[0][0]);
             progParticles->setFloat("fade", particle_positions[i].y);
-            shape->draw(progParticles, false);
+            particleShape->draw(progParticles, false);
         }
         progParticles->unbind();
         
