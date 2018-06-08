@@ -1,6 +1,8 @@
 // Core libraries
 #include <iostream>
 #include <cmath>
+#include <chrono>
+#include <random>
 
 // Third party libraries
 #include <glm/glm.hpp>
@@ -18,6 +20,10 @@
 #include "Camera.h"
 #include "bone.h"
 
+#define AMPLITUDE_FACTOR 0.005
+#define NUM_PARTICLES 300
+#define GRAVITY -2
+
 using namespace std;
 using namespace glm;
 
@@ -27,6 +33,20 @@ double get_last_elapsed_time() {
     double difference = actualtime - lasttime;
     lasttime = actualtime;
     return difference;
+}
+unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+static std::mt19937 generator (seed);
+
+vec3 transTurbulence(float t, vec3 amp)
+{
+    if(t == 0) amp = vec3(1 - (pow(2 * (float) generator() / (generator.max()), 2)),
+                    GRAVITY - (pow(2 * (float) generator() / (generator.max()), 2)),
+                          1 - (pow(2 * (float) generator() / (generator.max()), 2)));
+    
+    
+    return vec3(AMPLITUDE_FACTOR * amp.x * sin(3.14159 * t),
+                AMPLITUDE_FACTOR * amp.y * sin(3.14159 * t),
+                AMPLITUDE_FACTOR * amp.z * sin(3.14159 * t));
 }
 
 class Application : public EventCallbacks {
@@ -57,8 +77,9 @@ public:
     mat4 animmat[200];
     int animmatsize=0;
     
-    glm::vec3 particle_positions[200];
-    glm::vec3 particle_velocities[200];
+    glm::vec3 particle_positions[NUM_PARTICLES];
+    glm::vec3 particle_amplitudes[NUM_PARTICLES];
+    float particle_times[NUM_PARTICLES];
     vector<vec3> bone_positions;
     
     const float MODEL_SCALE_FACTOR = 0.01;
@@ -134,6 +155,14 @@ public:
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
+        for (int ii = 0; ii < NUM_PARTICLES; ii++)
+            particle_times[ii] = 0;
+        
+        for (int ii = 0; ii < NUM_PARTICLES; ii++)
+            particle_amplitudes[ii] = vec3(1 - (pow(2 * (float) generator() / (generator.max()), 2)),
+                                     GRAVITY - (pow(2 * (float) generator() / (generator.max()), 2)),
+                                           1 - (pow(2 * (float) generator() / (generator.max()), 2)));
+        
         shape = make_shared<Shape>();
         shape->loadMesh(resourceDirectory + "/1d_square.obj");
         shape->resize();
@@ -142,7 +171,7 @@ public:
         int width, height, channels;
         char filepath[1000];
         //texture 1
-        string str = resourceDirectory + "/star.png";
+        string str = resourceDirectory + "/orb.jpg";
         strcpy(filepath, str.c_str());
         unsigned char* data = stbi_load(filepath, &width, &height, &channels, 4);
         glGenTextures(1, &Texture);
@@ -160,12 +189,7 @@ public:
         glUseProgram(progParticles->getPID());
         glUniform1i(Tex1Location, 0);
         
-        for(int i = 0; i < 200; i ++)
-        {
-            float y_velocity =  0.05 + ((float)rand() / RAND_MAX / 8);
-            particle_velocities[i] = vec3(0, -1 * y_velocity, 0);
-            //cout << "velocity: " << y_velocity << endl;
-        }
+    
         
         readtobone("../../resources/ballin.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
         
@@ -186,7 +210,7 @@ public:
 
         for(int i=0; i<mesh_vertices_count; i++)
         {
-            cout << mesh_vertices[i][0] << endl;
+            //cout << mesh_vertices[i][0] << endl;
             mesh_floats[i*3+0] = mesh_vertices[i][0];
             mesh_floats[i*3+1] = mesh_vertices[i][1];
             mesh_floats[i*3+2] = mesh_vertices[i][2];
@@ -216,7 +240,7 @@ public:
         glEnableVertexAttribArray(1);
         glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
         
-        for (int i = 0; i < 200; i++)
+        for (int i = 0; i < NUM_PARTICLES; i++)
         {
             int joint = rand() % 198;            
             particle_positions[i].x = animmat[joint][3][0];
@@ -226,7 +250,7 @@ public:
             particle_positions[i][1] *= MODEL_SCALE_FACTOR;
             particle_positions[i][2] *= MODEL_SCALE_FACTOR;
             
-            cout << "POS: " << particle_positions[i].x << " " << particle_positions[i].y << " " << particle_positions[i].z << endl;
+            //cout << "POS: " << particle_positions[i].x << " " << particle_positions[i].y << " " << particle_positions[i].z << endl;
         }
 
         
@@ -268,6 +292,7 @@ public:
             std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
             exit(1);
         }
+        camera->pos = vec3(-1.0f, -1.0f, -8.0f);
        
     }
     
@@ -289,7 +314,6 @@ public:
         for (int ii = 0; ii < 200; ii++)
             animmat[ii] = mat4(1);
         
-        
         //animation frame system
         int anim_step_width_ms = 8490 / 204;
         static int frame = 0;
@@ -301,7 +325,7 @@ public:
         root->play_animation(frame,"Take 001");    //name of current animation
 
         // Clear framebuffer.
-        glClearColor(0.3f, 0.7f, 0.8f, 1.0f);
+        glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Create the matrix stacks.
@@ -318,7 +342,7 @@ public:
         //send the matrices to the shaders
         glBindVertexArray(VertexArrayID);
 
-        glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(-1.0f, -1.0f, -8.0f));
+        glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
         glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
         M = TransZ * S;
         skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
@@ -337,12 +361,15 @@ public:
 //        glUniformMatrix4fv(progParticles->getUniform("V"), 1, GL_FALSE, &V[0][0]);
 //        shape->draw(progParticles);
         glBindTexture(GL_TEXTURE_2D, Texture);
-        for(int i = 0; i < 200; i++)
+        for(int i = 0; i < NUM_PARTICLES; i++)
         {
             if(particle_positions[i].y > 0)
-                particle_positions[i].y += 0.1 * particle_velocities[i].y;
+            {
+                particle_positions[i] += transTurbulence(particle_times[i], particle_amplitudes[i]);
+            }
             else
             {
+                particle_times[i] = 0;
                 int joint = rand() % 198;
                 particle_positions[i].x = animmat[joint][3][0];
                 particle_positions[i].y = animmat[joint][3][1];
@@ -356,9 +383,19 @@ public:
             M = scale(M, vec3(0.01, 0.01, 0.01));
             progParticles->setMVP(&M[0][0], &V[0][0], &P[0][0]);
             progParticles->setFloat("fade", particle_positions[i].y);
-            shape->draw(progParticles, true);
+            shape->draw(progParticles, false);
         }
         progParticles->unbind();
+        
+        for (int ii = 0; ii < NUM_PARTICLES; ii++)
+        {
+            float addme = 0.01 * pow((float) generator() / generator.max(), 2);
+            //cout << "addme: " << addme << endl;
+            if(particle_times[ii] + addme < 1)
+                particle_times[ii] += addme;
+            else
+                particle_times[ii] = 0;
+        }
 
         
     }

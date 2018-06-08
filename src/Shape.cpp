@@ -195,6 +195,7 @@ void Shape::init()
 			glGenBuffers(1, &texBufID[i]);
 			glBindBuffer(GL_ARRAY_BUFFER, texBufID[i]);
 			glBufferData(GL_ARRAY_BUFFER, texBuf[i].size() * sizeof(float), texBuf[i].data(), GL_STATIC_DRAW);
+            cout << "texbuf size: " << texBuf[i].size() << endl;
 		}
 
 		// Send the element array to the GPU
