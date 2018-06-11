@@ -732,7 +732,13 @@ void DisplayListCurveKeys(FbxAnimCurve* pCurve, FbxProperty* pProperty)
  * and prints its contents in an xml format to stdout.
  */
 
-int readtobone(string file, all_animations *all_animation,bone **proot, FbxVector4** mesh_vertices, int* mesh_vertices_count)
+int readtobone(string file, all_animations *all_animation,
+               bone **proot,
+               vector<vec3> *meshpos,
+               vector<unsigned int> *meshindices,
+               vector<ivec4> *meshanimindices,
+               vector<vec4> *meshanimweights
+               )
 {
     
     //ifstream fileHandle("fgdfg");
@@ -788,9 +794,6 @@ int readtobone(string file, all_animations *all_animation,bone **proot, FbxVecto
     // Note that we are not printing the root node because it should
     // not contain any attributes.
     FbxNode* lRootNode = lScene->GetRootNode();
-    
-    ProcessMesh(lRootNode->GetChild(0), mesh_vertices, mesh_vertices_count);
-    
     int count_bones=0;
     int child_count = lRootNode->GetChildCount();
     for (int i = 0; i < child_count; i++)//nur einen knochen machen
@@ -808,13 +811,98 @@ int readtobone(string file, all_animations *all_animation,bone **proot, FbxVecto
     if (lRootNode)
     {
         int anz = lRootNode->GetChildCount();
-        for (int i = 0; i < lRootNode->GetChildCount(); i++)//nur einen knochen machen
+        for (int i = 0; i < lRootNode->GetChildCount(); i++)
         {
             PrintNode(root,lRootNode->GetChild(i), -1);
         }
+        
+        FbxMesh *fm = lRootNode->GetChild(0)->GetMesh();
+        if (fm)
+        {
+            int icount = fm->GetPolygonCount();
+            int cpcount = fm->GetControlPointsCount();
+            int *indices = fm->GetPolygonVertices();
+            FbxVector4* cp = fm->GetControlPoints();
+            
+            
+            if (meshindices)
+                for (int i = 0; i < icount; i++)
+                    meshindices->push_back(indices[i]);
+            if (meshpos)
+                for (int i = 0; i < cpcount; i++)
+                {
+                    vec3 p;
+                    p.x = cp[i][0];
+                    p.y = cp[i][1];
+                    p.z = cp[i][2];
+                    meshpos->push_back(p);
+                }
+            
+            //same size as controlpoints
+            
+            meshanimweights->resize(cpcount);
+            meshanimindices->resize(cpcount);
+            for (int i = 0; i < cpcount; i++)
+            {
+                (*meshanimindices)[i] = ivec4(-1);
+                (*meshanimweights)[i] = vec4(0);
+            }
+            
+            int ncdeformers = fm->GetDeformerCount();
+            
+            
+            for (int i = 0; i < ncdeformers && i < 1; ++i)
+            {
+                // skin
+                FbxSkin *pSkin = (FbxSkin*)fm->GetDeformer(i, FbxDeformer::eSkin);
+                if (pSkin == NULL)
+                    continue;
+                
+                // bone count
+                int ncBones = pSkin->GetClusterCount();
+                
+                // iterate bones
+                for (int boneIndex = 0; boneIndex < ncBones; ++boneIndex)
+                {
+                    // cluster
+                    FbxCluster* cluster = pSkin->GetCluster(boneIndex);
+                    
+                    // bone ref
+                    FbxNode* pBone = cluster->GetLink();
+                    unsigned int rootboneindex = root->get_index(pBone->GetName());
+                    if (rootboneindex < 0) continue;//bone not found in structure
+                    
+                    int *pVertexIndices = cluster->GetControlPointIndices();
+                    double *pVertexWeights = cluster->GetControlPointWeights();
+                    
+                    // Iterate through all the vertices, which are affected by the bone
+                    int ncVertexIndices = cluster->GetControlPointIndicesCount();
+                    cout << "bone index: " << rootboneindex << endl;
+                    for (int iBoneVertexIndex = 0; iBoneVertexIndex < ncVertexIndices; iBoneVertexIndex++)
+                    {
+                        // vertex
+                        int niVertex = pVertexIndices[iBoneVertexIndex];
+                        float fWeight = (float)pVertexWeights[iBoneVertexIndex];
+                        //find a free index
+                        cout << "weight: " << fWeight << endl;
+                        for (int ii = 0; ii < 4; ii++)
+                            if (fWeight > (*meshanimindices)[niVertex][ii])
+                            {
+                                (*meshanimindices)[niVertex][ii] = rootboneindex;
+                                (*meshanimweights)[niVertex][ii] = fWeight;
+                                break;
+                            }
+                        for (int ii = 0; ii < 4; ii++)
+                            cout << "SAVED WEIGHT[" << ii << "]: " << (*meshanimweights)[niVertex][ii] << endl;
+                        
+                        
+                    }
+                }
+            }
+        }
     }
     
-//    cout << "----------------------------------------------------------------------------------------------------" << endl;
+    cout << "----------------------------------------------------------------------------------------------------" << endl;
     ///////////////////
     ///    Animation Data
     /////////////////

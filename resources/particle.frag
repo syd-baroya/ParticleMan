@@ -19,7 +19,7 @@ void main()
         color.a = fade;
     
     //color.rgb = vec3(texcolor.r,texcolor.g,0);
-    color.r = 0.8 - fade;
+    color.r = 4 * (1.0 - fade) ;
     color.g = fade;
     color.b = texcolor.g;
     

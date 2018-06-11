@@ -97,6 +97,25 @@ public:
         for (int i = 0; i < kids.size(); i++)
             kids[i]->set_animations(all_anim, matrices, animsize);
     }
+    unsigned int get_index(string bonename)
+    {
+        if (name == bonename)
+            return index;
+        for (int i = 0; i < kids.size(); i++)
+        {
+            int ret=kids[i]->get_index(bonename);
+            if (ret >= 0)
+                return ret;
+        }
+        return -1;
+    }
     
 };
-int readtobone(string file,all_animations *all_animation, bone **proot, FbxVector4** mesh_vertices, int* mesh_vertices_count);
+int readtobone(string file,
+               all_animations *all_animation,
+               bone **proot,
+               vector<vec3> *meshpos,
+               vector<unsigned int> *meshindices,
+               vector<ivec4> *meshanimindices,
+               vector<vec4> *meshanimweights
+               );

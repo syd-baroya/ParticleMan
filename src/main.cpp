@@ -20,9 +20,12 @@
 #include "Camera.h"
 #include "bone.h"
 
-#define AMPLITUDE_FACTOR 0.005
-#define NUM_PARTICLES 400
-#define GRAVITY -2
+#define AMPLITUDE_FACTOR 0.005 // Amplitude of turbulence. 0.005 works well, but feel free to change
+#define NUM_PARTICLES 600 // Number of particles. Any number works. Feel free to change.
+#define GRAVITY -2 // Gravity that the particles experience. -2 works well. Feel free to change.
+#define MODEL_SCALE_FACTOR 0.01 // Scales the FBX model. DON'T CHANGE. Must be set to 0.01.
+#define PARTICLE_SCALE_FACTOR 0.015 // Sets particle size. Anywhere from 0.005 - 0.02 works. Feel free to change.
+#define FADE_DISTANCE 2.0 // The distance at which particles begin to fade. Anywhere from 1.0 - 2.0 works. Feel free to change.
 
 using namespace std;
 using namespace glm;
@@ -57,7 +60,7 @@ public:
     std::shared_ptr<Shape> particleShape;
     shared_ptr<Shape> skySphere;
     shared_ptr<Shape> floor;
-    std::shared_ptr<Program> skeleton;
+    std::shared_ptr<Program> progSkeleton;
     std::shared_ptr<Program> progParticles;
     std::shared_ptr<Program> progSky;
     std::shared_ptr<Program> progFloor;
@@ -68,9 +71,18 @@ public:
     
     // Contains vertex information for OpenGL
     GLuint VertexArrayID;
-    
+        
+    // Contains vertex information for OpenGL
+    GLuint VertexArrayIDMesh;
+    GLuint VAO1,VBO,IBO;
     // Data necessary to give our box to OpenGL
-    GLuint VertexBufferID, VertexNormDBox, VertexTexBox, IndexBufferIDBox, VertexBufferIDimat;
+    GLuint VertexBufferIDMesh, VertexBufferIDimat, VertexBufferIDMeshIndices;
+    
+    //MESHSTUFF
+    vector<vec3> meshpos;
+    vector<unsigned int> meshindices;
+    vector<ivec4> meshanimindices;
+    vector<vec4> meshanimweights;
     
     double gametime = 0;
     bool wireframeEnabled = false;
@@ -83,13 +95,11 @@ public:
     mat4 animmat[200];
     int animmatsize=0;
     
+    glm::vec3 particle_initial_positions[NUM_PARTICLES];
     glm::vec3 particle_positions[NUM_PARTICLES];
     glm::vec3 particle_amplitudes[NUM_PARTICLES];
     float particle_times[NUM_PARTICLES];
     vector<vec3> bone_positions;
-    
-    const float MODEL_SCALE_FACTOR = 0.01;
-
 
     Application() {
         camera = new Camera();
@@ -231,38 +241,16 @@ public:
         
     
         
-        readtobone("../../resources/ballin.fbx",&all_animation,&root, &mesh_vertices, &mesh_vertices_count);
-        
-
-        
+        readtobone(resourceDirectory + "/ballin.fbx",&all_animation,&root, &meshpos, &meshindices,&meshanimindices,&meshanimweights);
         root->set_animations(&all_animation,animmat,animmatsize);
         
         glGenVertexArrays(1, &VertexArrayID);
         glBindVertexArray(VertexArrayID);
         
         //generate vertex buffer to hand off to OGL
-        glGenBuffers(1, &VertexBufferID);
+        glGenBuffers(1, &VertexBufferIDMesh);
         //set the current state to focus on our vertex buffer
-        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferID);
-        
-        
-        GLfloat mesh_floats[mesh_vertices_count*3];
-
-        for(int i=0; i<mesh_vertices_count; i++)
-        {
-            //cout << mesh_vertices[i][0] << endl;
-            mesh_floats[i*3+0] = mesh_vertices[i][0];
-            mesh_floats[i*3+1] = mesh_vertices[i][1];
-            mesh_floats[i*3+2] = mesh_vertices[i][2];
-        }
-        for (int i = 0; i < mesh_vertices_count*3; i++)
-            mesh_floats[i] *=200;
-
-
-
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(mesh_floats), mesh_floats, GL_STATIC_DRAW);
-//        glEnableVertexAttribArray(0);
-//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDMesh);
         
         vector<vec3> pos;
         vector<unsigned int> imat;
@@ -282,13 +270,14 @@ public:
         
         for (int i = 0; i < NUM_PARTICLES; i++)
         {
-            int joint = rand() % 198;            
-            particle_positions[i].x = animmat[joint][3][0];
-            particle_positions[i].y = animmat[joint][3][1];
-            particle_positions[i].z = animmat[joint][3][2];
-            particle_positions[i][0] *= MODEL_SCALE_FACTOR;
-            particle_positions[i][1] *= MODEL_SCALE_FACTOR;
-            particle_positions[i][2] *= MODEL_SCALE_FACTOR;
+            int joint = rand() % 70;
+            particle_positions[i].x = animmat[joint][3][0] * MODEL_SCALE_FACTOR;
+            particle_positions[i].y = animmat[joint][3][1] * MODEL_SCALE_FACTOR;
+            particle_positions[i].z = animmat[joint][3][2] * MODEL_SCALE_FACTOR;
+            
+            particle_initial_positions[i].x = particle_positions[i].x;
+            particle_initial_positions[i].y = particle_positions[i].y;
+            particle_initial_positions[i].z = particle_positions[i].z;
             
             //cout << "POS: " << particle_positions[i].x << " " << particle_positions[i].y << " " << particle_positions[i].z << endl;
         }
@@ -335,7 +324,6 @@ public:
             std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
             exit(1);
         }
-        progFloor->init();
         progFloor->addUniform("camPos");
         progFloor->addAttribute("vertPos");
         progFloor->addAttribute("vertNor");
@@ -353,14 +341,18 @@ public:
         progParticles->addAttribute("vertNor");
         progParticles->addAttribute("vertTex");
         
-        skeleton = std::make_shared<Program>();
-        skeleton->setVerbose(true);
-        skeleton->setShaderNames(resourceDirectory + "/skeleton.vert", resourceDirectory + "/skeleton.frag");
-        if (!skeleton->init())
+        progSkeleton = std::make_shared<Program>();
+        progSkeleton->setVerbose(true);
+        progSkeleton->setShaderNames(resourceDirectory + "/skeleton.vert", resourceDirectory + "/skeleton.frag");
+        if (!progSkeleton->init())
         {
             std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
             exit(1);
         }
+        progSkeleton->addAttribute("vertPos"); //meshpos[]
+        progSkeleton->addAttribute("vertImat"); //meshindices[]
+        progSkeleton->addAttribute("weightIndex"); //meshanimindices[]
+        progSkeleton->addAttribute("weight"); //meshanimweights[]
         camera->pos = vec3(-1.0f, -1.0f, -8.0f);
        
     }
@@ -407,22 +399,22 @@ public:
         /* DRAW SKELETON */
         /**************/
         
-        skeleton->bind();
+        progSkeleton->bind();
         //send the matrices to the shaders
         glBindVertexArray(VertexArrayID);
 
         glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
         glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
         M = TransZ * S;
-        skeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
-        skeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
+        progSkeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+        progSkeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
 //        glDrawArrays(GL_TRIANGLES,0,mesh_vertices_count/9);
         glDrawArrays(GL_LINES, 2, size_stick-2);
         //glBindVertexArray(0);
-        skeleton->unbind();
+        progSkeleton->unbind();
         
         static float angle = 0.0;
-        angle += 0.0001;
+        angle += 0.0005;
         progSky->bind();
         mat4 Rx = glm::rotate(glm::mat4(1), 3.14159f/2.0f,glm::vec3(1, 0, 0));
         mat4 Ry = glm::rotate(glm::mat4(1), angle, glm::vec3(0, 1, 0));
@@ -455,26 +447,35 @@ public:
         glBindTexture(GL_TEXTURE_2D, particleTex);
         for(int i = 0; i < NUM_PARTICLES; i++)
         {
-            if(particle_positions[i].y > 0)
+            float fade = distance(particle_initial_positions[i], particle_positions[i]);
+            if(fade < FADE_DISTANCE)
             {
                 particle_positions[i] += transTurbulence(particle_times[i], particle_amplitudes[i]);
             }
             else
             {
                 particle_times[i] = 0;
-                int joint = rand() % 198;
-                particle_positions[i].x = animmat[joint][3][0];
-                particle_positions[i].y = animmat[joint][3][1];
-                particle_positions[i].z = animmat[joint][3][2];
-                particle_positions[i][0] *= MODEL_SCALE_FACTOR;
-                particle_positions[i][1] *= MODEL_SCALE_FACTOR;
-                particle_positions[i][2] *= MODEL_SCALE_FACTOR;
+                int joint = 1 + rand() % 72;
+                while( joint == 5)
+                    joint = 1 + rand() % 72;
+                particle_positions[i].x = animmat[joint][3][0] * MODEL_SCALE_FACTOR;
+                particle_positions[i].y = animmat[joint][3][1] * MODEL_SCALE_FACTOR;
+                particle_positions[i].z = animmat[joint][3][2] * MODEL_SCALE_FACTOR;
+                
+                particle_initial_positions[i].x = particle_positions[i].x;
+                particle_initial_positions[i].y = particle_positions[i].y;
+                particle_initial_positions[i].z = particle_positions[i].z;
+                
+                if(particle_initial_positions[i].y <= 0)
+                    cout << "JOINT SUCKS: " << joint << endl;
             }
             
             M = glm::translate(TransZ, particle_positions[i]) * faceTheCam;
-            M = scale(M, vec3(0.01, 0.01, 0.01));
+            M = scale(M, vec3(PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
+                              PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
+                              PARTICLE_SCALE_FACTOR * (1 - particle_times[i])));
             progParticles->setMVP(&M[0][0], &V[0][0], &P[0][0]);
-            progParticles->setFloat("fade", particle_positions[i].y);
+            progParticles->setFloat("fade", (FADE_DISTANCE - fade) / FADE_DISTANCE);
             particleShape->draw(progParticles, false);
         }
         progParticles->unbind();
