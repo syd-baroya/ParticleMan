@@ -24,9 +24,6 @@ void main()
     mat4 Mw3 = Manim[wi3];
     
     vec4 pos = vec4(1.0);
-    float best = w0;
-    float worst = w0;
-    mat4 bestmat = Mw0;
     
 //    if(w0 > w1 && w0 > w2 && w0 > w3){  w0 = 1; }
 //    if(w1 > w0 && w1 > w2 && w1 > w3){  w1 = 1; }
@@ -38,34 +35,6 @@ void main()
 //    if(w2 < w0 && w2 < w1 && w2 < w3){  w2 = 0; }
 //    if(w3 < w0 && w3 < w1 && w3 < w2){  w3 = 0; }
 
-    if(w1 > best)
-    {
-        best = w1;
-        bestmat = Mw1;
-    }
-    if(w2 > best)
-    {
-        best = w2;
-        bestmat = Mw2;
-    }
-    if(w3 > best)
-    {
-        best = w3;
-        bestmat = Mw3;
-    }
-    
-    if(w1 < worst)
-    {
-        worst = w1;
-    }
-    if(w2 < worst)
-    {
-        worst = w2;
-    }
-    if(w3 < worst)
-    {
-        worst = w3;
-    }
     
 //    w0 = ((w0 - worst) / (best - worst));
 //    w1 = ((w1 - worst) / (best - worst));

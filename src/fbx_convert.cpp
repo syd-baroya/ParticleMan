@@ -869,37 +869,29 @@ int readtobone(string file, all_animations *all_animation,
                     
                     // Iterate through all the vertices, which are affected by the bone
                     int ncVertexIndices = cluster->GetControlPointIndicesCount();
-                    cout << "bone index: " << rootboneindex << endl;
+                    //cout << "bone index: " << rootboneindex << endl;
                     for (int iBoneVertexIndex = 0; iBoneVertexIndex < ncVertexIndices; iBoneVertexIndex++)
                     {
                         // vertex
                         int niVertex = pVertexIndices[iBoneVertexIndex];
                         float fWeight = (float)pVertexWeights[iBoneVertexIndex];
                         //find a free index
-                        cout << "weight: " << fWeight << endl;
+                        //cout << "weight: " << fWeight << endl;
                         for (int ii = 0; ii < 4; ii++)
                         {
-                            if ((*meshanimindices)[niVertex][ii] < 0)
+                            if ((*meshanimweights)[niVertex][ii] < fWeight)
                             {
                                 (*meshanimindices)[niVertex][ii] = rootboneindex;
                                 (*meshanimweights)[niVertex][ii] = fWeight;
                                 break;
                             }
                         }
-                        for (int ii = 0; ii < 4; ii++)
-                            cout << "SAVED WEIGHT[" << ii << "]: " << (*meshanimweights)[niVertex][ii] << endl;
+//                        for (int ii = 0; ii < 4; ii++)
+//                            cout << "SAVED WEIGHT[" << ii << "]: " << (*meshanimweights)[niVertex][ii] << endl;
                         
                         
                     }
                 }
-//                for (int i = 0; i < cpcount; i++)
-//                {
-//                    for(int j = 0; j < 4; j++)
-//                    {
-//                        if(*meshanimweights)[i][j] < 0)
-//                            
-//                    }
-//                }
             }
         }
     }
