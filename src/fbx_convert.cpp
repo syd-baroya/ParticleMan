@@ -718,15 +718,6 @@ void DisplayListCurveKeys(FbxAnimCurve* pCurve, FbxProperty* pProperty)
     }
 }
 
-
-
-
-
-
-
-
-
-
 /**
  * Main function - loads the hard-coded fbx file,
  * and prints its contents in an xml format to stdout.
@@ -810,7 +801,6 @@ int readtobone(string file, all_animations *all_animation,
     
     if (lRootNode)
     {
-        int anz = lRootNode->GetChildCount();
         for (int i = 0; i < lRootNode->GetChildCount(); i++)
         {
             PrintNode(root,lRootNode->GetChild(i), -1);
@@ -819,8 +809,10 @@ int readtobone(string file, all_animations *all_animation,
         FbxMesh *fm = lRootNode->GetChild(0)->GetMesh();
         if (fm)
         {
-            int icount = fm->GetPolygonCount();
+            int icount = fm->GetPolygonCount() * 3;
+            cout << "Polygon count " << icount << endl;
             int cpcount = fm->GetControlPointsCount();
+            cout << "vertex count " << cpcount << endl;
             int *indices = fm->GetPolygonVertices();
             FbxVector4* cp = fm->GetControlPoints();
             
@@ -886,18 +878,28 @@ int readtobone(string file, all_animations *all_animation,
                         //find a free index
                         cout << "weight: " << fWeight << endl;
                         for (int ii = 0; ii < 4; ii++)
-                            if (fWeight > (*meshanimindices)[niVertex][ii])
+                        {
+                            if ((*meshanimindices)[niVertex][ii] < 0)
                             {
                                 (*meshanimindices)[niVertex][ii] = rootboneindex;
                                 (*meshanimweights)[niVertex][ii] = fWeight;
                                 break;
                             }
+                        }
                         for (int ii = 0; ii < 4; ii++)
                             cout << "SAVED WEIGHT[" << ii << "]: " << (*meshanimweights)[niVertex][ii] << endl;
                         
                         
                     }
                 }
+//                for (int i = 0; i < cpcount; i++)
+//                {
+//                    for(int j = 0; j < 4; j++)
+//                    {
+//                        if(*meshanimweights)[i][j] < 0)
+//                            
+//                    }
+//                }
             }
         }
     }

@@ -20,12 +20,14 @@
 #include "Camera.h"
 #include "bone.h"
 
-#define AMPLITUDE_FACTOR 0.005 // Amplitude of turbulence. 0.005 works well, but feel free to change
-#define NUM_PARTICLES 600 // Number of particles. Any number works. Feel free to change.
-#define GRAVITY -2 // Gravity that the particles experience. -2 works well. Feel free to change.
-#define MODEL_SCALE_FACTOR 0.01 // Scales the FBX model. DON'T CHANGE. Must be set to 0.01.
-#define PARTICLE_SCALE_FACTOR 0.015 // Sets particle size. Anywhere from 0.005 - 0.02 works. Feel free to change.
-#define FADE_DISTANCE 2.0 // The distance at which particles begin to fade. Anywhere from 1.0 - 2.0 works. Feel free to change.
+#define AMPLITUDE_FACTOR      0.005     // Amplitude of turbulence. 0.005 works well, but feel free to change
+#define NUM_PARTICLES         600       // Number of particles. Any number works. Feel free to change.
+#define GRAVITY               -2        // Gravity that the particles experience. -2 works well. Feel free to change.
+#define PARTICLE_SCALE_FACTOR 0.015     // Sets particle size. Anywhere from 0.005 - 0.02 works. Feel free to change.
+#define FADE_DISTANCE         2.0       // The distance at which particles begin to fade. Anywhere from 1.0 - 2.0 works. Feel free to change.
+
+#define MODEL_SCALE_FACTOR    0.01      // Scales the FBX model. DON'T CHANGE. Must be set to 0.01.
+
 
 using namespace std;
 using namespace glm;
@@ -70,13 +72,13 @@ public:
     GLuint skyTex;
     
     // Contains vertex information for OpenGL
-    GLuint VertexArrayID;
+    GLuint VertexArrayIDFBXBones;
         
     // Contains vertex information for OpenGL
     GLuint VertexArrayIDMesh;
-    GLuint VAO1,VBO,IBO;
     // Data necessary to give our box to OpenGL
-    GLuint VertexBufferIDMesh, VertexBufferIDimat, VertexBufferIDMeshIndices;
+    GLuint VertexBufferIDMesh, VertexBufferIDWeightIndices, IndexBufferIDMeshIndices, VertexBufferIDWeights;
+    int MeshVAOSize=0;
     
     //MESHSTUFF
     vector<vec3> meshpos;
@@ -241,32 +243,81 @@ public:
         
     
         
-        readtobone(resourceDirectory + "/ballin.fbx",&all_animation,&root, &meshpos, &meshindices,&meshanimindices,&meshanimweights);
+        readtobone(resourceDirectory + "/ballin2.fbx",&all_animation,&root, &meshpos, &meshindices,&meshanimindices,&meshanimweights);
         root->set_animations(&all_animation,animmat,animmatsize);
         
-        glGenVertexArrays(1, &VertexArrayID);
-        glBindVertexArray(VertexArrayID);
+//        glGenVertexArrays(6, &VertexArrayIDFBXBones);
+//        glBindVertexArray(VertexArrayIDFBXBones);
+//
+//        vector<vec3> pos;
+//        vector<unsigned int> imat;
+//        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
+//        bone_positions = pos;
+//        size_stick = pos.size();
+//        //generate vertex buffer to hand off to OGL
+//        glGenBuffers(1, &VertexBufferIDBonePositions);
+//        //set the current state to focus on our vertex buffer
+//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDBonePositions);
+//        //actually memcopy the data - only do this once
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(0);
+//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+//
+//        //indices of matrix:
+//        glGenBuffers(1, &VertexBufferIDimat);
+//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(1);
+//        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
         
+        //MESH STUFF
+        
+        //generate the VAO
+        glGenVertexArrays(1, &VertexArrayIDMesh);
+        glBindVertexArray(VertexArrayIDMesh);
         //generate vertex buffer to hand off to OGL
+        
         glGenBuffers(1, &VertexBufferIDMesh);
         //set the current state to focus on our vertex buffer
         glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDMesh);
-        
-        vector<vec3> pos;
-        vector<unsigned int> imat;
-        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
-        bone_positions = pos;
-        size_stick = pos.size();
         //actually memcopy the data - only do this once
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*meshpos.size(), meshpos.data(), GL_DYNAMIC_DRAW);
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-        //indices of matrix:
-        glGenBuffers(1, &VertexBufferIDimat);
-        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
+        
+        glGenBuffers(1, &VertexBufferIDWeightIndices);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDWeightIndices);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(ivec4)*meshanimindices.size(), meshanimindices.data(), GL_DYNAMIC_DRAW);
         glEnableVertexAttribArray(1);
-        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
+        glVertexAttribIPointer(1, 4, GL_INT, GL_FALSE, (void*)0);
+        
+        glGenBuffers(1, &VertexBufferIDWeights);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDWeights);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vec4)*meshanimweights.size(), meshanimweights.data(), GL_DYNAMIC_DRAW);
+        glEnableVertexAttribArray(2);
+        glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        
+//        glGenBuffers(1, &VertexBufferIDMesh);
+//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDMesh);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec4)*meshnormals.size(), meshnormals.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(2);
+//        glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        
+//        glGenBuffers(1, &VertexBufferIDMesh);
+//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDMesh);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec4)*meshtexcoords.size(), meshtexcoords.data(), GL_DYNAMIC_DRAW);
+//        glEnableVertexAttribArray(2);
+//        glVertexAttribPointer(4, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        
+        //indices of model:
+        glGenBuffers(1, &IndexBufferIDMeshIndices);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndexBufferIDMeshIndices);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, meshindices.size() * sizeof(unsigned int), meshindices.data(), GL_STATIC_DRAW);
+        MeshVAOSize = meshindices.size();
+        glBindVertexArray(0);
+        
+        // End MESH STUFF
+        
         
         for (int i = 0; i < NUM_PARTICLES; i++)
         {
@@ -349,12 +400,14 @@ public:
             std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
             exit(1);
         }
+        progSkeleton->addUniform("Manim");
+        progSkeleton->addUniform("campos");
         progSkeleton->addAttribute("vertPos"); //meshpos[]
-        progSkeleton->addAttribute("vertImat"); //meshindices[]
-        progSkeleton->addAttribute("weightIndex"); //meshanimindices[]
-        progSkeleton->addAttribute("weight"); //meshanimweights[]
+        progSkeleton->addAttribute("vertImat"); //meshanimindices[]
+        progSkeleton->addAttribute("vertWeights"); //meshanimweights[]
+        
+        
         camera->pos = vec3(-1.0f, -1.0f, -8.0f);
-       
     }
     
     glm::mat4 getPerspectiveMatrix() {
@@ -398,20 +451,22 @@ public:
         /**************/
         /* DRAW SKELETON */
         /**************/
-        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         progSkeleton->bind();
         //send the matrices to the shaders
-        glBindVertexArray(VertexArrayID);
+        glBindVertexArray(VertexArrayIDFBXBones);
 
         glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
         glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
         M = TransZ * S;
         progSkeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         progSkeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
-//        glDrawArrays(GL_TRIANGLES,0,mesh_vertices_count/9);
-        glDrawArrays(GL_LINES, 2, size_stick-2);
         //glBindVertexArray(0);
+        glBindVertexArray(VertexArrayIDMesh);
+        glDrawElements(GL_TRIANGLES, MeshVAOSize, GL_UNSIGNED_INT, (void*)0);
         progSkeleton->unbind();
+        
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         
         static float angle = 0.0;
         angle += 0.0005;
