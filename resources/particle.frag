@@ -19,8 +19,9 @@ void main()
         color.a = fade;
     
     //color.rgb = vec3(texcolor.r,texcolor.g,0);
-    color.r = 4 * (1.0 - fade) ;
-    color.g = fade;
+    color.r = 4 * (1.0 - fade);
+    if(fade < 0.5) color.g = fade;
+    else color.g = 0.5 - fade;
     color.b = texcolor.g;
     
     

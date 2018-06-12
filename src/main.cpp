@@ -62,6 +62,7 @@ public:
     std::shared_ptr<Shape> particleShape;
     shared_ptr<Shape> skySphere;
     shared_ptr<Shape> floor;
+    std::shared_ptr<Program> progModelMesh;
     std::shared_ptr<Program> progSkeleton;
     std::shared_ptr<Program> progParticles;
     std::shared_ptr<Program> progSky;
@@ -77,7 +78,7 @@ public:
     // Contains vertex information for OpenGL
     GLuint VertexArrayIDMesh;
     // Data necessary to give our box to OpenGL
-    GLuint VertexBufferIDMesh, VertexBufferIDWeightIndices, IndexBufferIDMeshIndices, VertexBufferIDWeights;
+    GLuint VertexBufferIDBonePositions, VertexBufferIDimat, VertexBufferIDMesh, VertexBufferIDWeightIndices, IndexBufferIDMeshIndices, VertexBufferIDWeights;
     int MeshVAOSize=0;
     
     //MESHSTUFF
@@ -246,29 +247,29 @@ public:
         readtobone(resourceDirectory + "/ballin2.fbx",&all_animation,&root, &meshpos, &meshindices,&meshanimindices,&meshanimweights);
         root->set_animations(&all_animation,animmat,animmatsize);
         
-//        glGenVertexArrays(6, &VertexArrayIDFBXBones);
-//        glBindVertexArray(VertexArrayIDFBXBones);
-//
-//        vector<vec3> pos;
-//        vector<unsigned int> imat;
-//        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
-//        bone_positions = pos;
-//        size_stick = pos.size();
-//        //generate vertex buffer to hand off to OGL
-//        glGenBuffers(1, &VertexBufferIDBonePositions);
-//        //set the current state to focus on our vertex buffer
-//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDBonePositions);
-//        //actually memcopy the data - only do this once
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
-//        glEnableVertexAttribArray(0);
-//        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-//
-//        //indices of matrix:
-//        glGenBuffers(1, &VertexBufferIDimat);
-//        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
-//        glEnableVertexAttribArray(1);
-//        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
+        glGenVertexArrays(6, &VertexArrayIDFBXBones);
+        glBindVertexArray(VertexArrayIDFBXBones);
+
+        vector<vec3> pos;
+        vector<unsigned int> imat;
+        root->write_to_VBOs(vec3(0, 0, 0), pos, imat);
+        bone_positions = pos;
+        size_stick = pos.size();
+        //generate vertex buffer to hand off to OGL
+        glGenBuffers(1, &VertexBufferIDBonePositions);
+        //set the current state to focus on our vertex buffer
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDBonePositions);
+        //actually memcopy the data - only do this once
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vec3)*pos.size(), pos.data(), GL_DYNAMIC_DRAW);
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+
+        //indices of matrix:
+        glGenBuffers(1, &VertexBufferIDimat);
+        glBindBuffer(GL_ARRAY_BUFFER, VertexBufferIDimat);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(uint)*imat.size(), imat.data(), GL_DYNAMIC_DRAW);
+        glEnableVertexAttribArray(1);
+        glVertexAttribIPointer(1, 1, GL_UNSIGNED_INT, 0, (void*)0);
         
         //MESH STUFF
         
@@ -318,7 +319,9 @@ public:
         
         // End MESH STUFF
         
-        
+//        for (int i = 0; i < meshanimweights.size(); i++)
+//            cout << "weight sum: " << meshanimweights[i].x + meshanimweights[i].y + meshanimweights[i].z + meshanimweights[i].w << endl;
+//        
         for (int i = 0; i < NUM_PARTICLES; i++)
         {
             int joint = rand() % 70;
@@ -400,14 +403,31 @@ public:
             std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
             exit(1);
         }
+        progSkeleton->addUniform("P");
+        progSkeleton->addUniform("V");
+        progSkeleton->addUniform("M");
         progSkeleton->addUniform("Manim");
         progSkeleton->addUniform("campos");
-        progSkeleton->addAttribute("vertPos"); //meshpos[]
-        progSkeleton->addAttribute("vertImat"); //meshanimindices[]
-        progSkeleton->addAttribute("vertWeights"); //meshanimweights[]
+        progSkeleton->addAttribute("vertPos");
+        progSkeleton->addAttribute("vertimat");
+        
+        progModelMesh = std::make_shared<Program>();
+        progModelMesh->setVerbose(true);
+        progModelMesh->setShaderNames(resourceDirectory + "/modelMesh.vert", resourceDirectory + "/modelMesh.frag");
+        if (!progModelMesh->init())
+        {
+            std::cerr << "One or more shaders failed to compile... exiting!" << std::endl;
+            exit(1);
+        }
+        progModelMesh->addUniform("Manim");
+        progModelMesh->addUniform("campos");
+        progModelMesh->addAttribute("vertPos"); //meshpos[]
+        progModelMesh->addAttribute("vertImat"); //meshanimindices[]
+        progModelMesh->addAttribute("vertWeights"); //meshanimweights[]
         
         
         camera->pos = vec3(-1.0f, -1.0f, -8.0f);
+        
     }
     
     glm::mat4 getPerspectiveMatrix() {
@@ -417,6 +437,8 @@ public:
     }
 
     void render() {
+        vec3 modelMeshPos = vec3(1,0,0);
+        vec3 skeletonPos  = vec3(-1,0,0);
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         double frametime = get_last_elapsed_time();
@@ -448,23 +470,39 @@ public:
         V = camera->getViewMatrix();
         M = glm::mat4(1);
 
+        progSkeleton->bind();
+        //send the matrices to the shaders
+        glUniformMatrix4fv(progSkeleton->getUniform("P"), 1, GL_FALSE, &P[0][0]);
+        
+        glBindVertexArray(VertexArrayIDFBXBones);
+        
+        
+        glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), skeletonPos);
+        glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(0.01f, 0.01f, 0.01f));
+        M = TransZ * S;
+        progSkeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+        glUniformMatrix4fv(progSkeleton->getUniform("Manim"), 200, GL_FALSE, &animmat[0][0][0]);
+        glDrawArrays(GL_LINES, 2, size_stick-2);
+        glBindVertexArray(0);
+        progSkeleton->unbind();
+        
         /**************/
-        /* DRAW SKELETON */
+        /* DRAW MESH */
         /**************/
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        progSkeleton->bind();
+        progModelMesh->bind();
         //send the matrices to the shaders
         glBindVertexArray(VertexArrayIDFBXBones);
 
-        glm::mat4 TransZ = glm::translate(glm::mat4(1.0f), glm::vec3(0, 0, 0));
-        glm::mat4 S = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
-        M = TransZ * S;
-        progSkeleton->setMVP(&M[0][0], &V[0][0], &P[0][0]);
-        progSkeleton->setMatrixArray("Manim", 200, &animmat[0][0][0]);
+        glm::mat4 Trans = glm::translate(glm::mat4(1.0f), modelMeshPos);
+        glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR, MODEL_SCALE_FACTOR));
+        M = Trans * scale;
+        progModelMesh->setMVP(&M[0][0], &V[0][0], &P[0][0]);
+        progModelMesh->setMatrixArray("Manim", 200, &animmat[0][0][0]);
         //glBindVertexArray(0);
         glBindVertexArray(VertexArrayIDMesh);
         glDrawElements(GL_TRIANGLES, MeshVAOSize, GL_UNSIGNED_INT, (void*)0);
-        progSkeleton->unbind();
+        progModelMesh->unbind();
         
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         
@@ -526,9 +564,10 @@ public:
             }
             
             M = glm::translate(TransZ, particle_positions[i]) * faceTheCam;
-            M = scale(M, vec3(PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
-                              PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
-                              PARTICLE_SCALE_FACTOR * (1 - particle_times[i])));
+            M = glm::scale(M, vec3(PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
+                                   PARTICLE_SCALE_FACTOR * (1 - particle_times[i]),
+                                   PARTICLE_SCALE_FACTOR * (1 - particle_times[i])));
+            
             progParticles->setMVP(&M[0][0], &V[0][0], &P[0][0]);
             progParticles->setFloat("fade", (FADE_DISTANCE - fade) / FADE_DISTANCE);
             particleShape->draw(progParticles, false);
