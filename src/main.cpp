@@ -69,7 +69,7 @@ public:
     std::shared_ptr<Program> progFloor;
     
     
-    GLuint particleTex;
+    GLuint particleTex, sparkParticleTex;
     GLuint skyTex;
     
     // Contains vertex information for OpenGL
@@ -103,6 +103,7 @@ public:
     glm::vec3 particle_amplitudes[NUM_PARTICLES];
     float particle_times[NUM_PARTICLES];
     vector<vec3> bone_positions;
+    int switch_particles = 0;
 
     Application() {
         camera = new Camera();
@@ -132,9 +133,9 @@ public:
         }
         // Hide cursor (allows unlimited scrolling)
         if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {
-            mouseCaptured = !mouseCaptured;
-            glfwSetInputMode(window, GLFW_CURSOR, mouseCaptured ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
-            resetMouseMoveInitialValues(window);
+            switch_particles++;
+            if(switch_particles>1)
+                switch_particles = 0;
         }
     }
 
@@ -216,12 +217,25 @@ public:
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
         glGenerateMipmap(GL_TEXTURE_2D);
         
+        str = resourceDirectory + "/explodingAnimation.png";
+        strcpy(filepath, str.c_str());
+        data = stbi_load(filepath, &width, &height, &channels, 4);
+        glGenTextures(1, &sparkParticleTex);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, sparkParticleTex);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+        
         //sky texture
         str = resourceDirectory + "/obsidian.jpg";
         strcpy(filepath, str.c_str());
         data = stbi_load(filepath, &width, &height, &channels, 4);
         glGenTextures(1, &skyTex);
-        glActiveTexture(GL_TEXTURE1);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, skyTex);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -231,13 +245,13 @@ public:
         glGenerateMipmap(GL_TEXTURE_2D);
         
         GLuint Tex1Location = glGetUniformLocation(progParticles->getPID(), "tex");
-        GLuint Tex2Location = glGetUniformLocation(progSky->getPID(), "tex");
+        GLuint Tex0Location = glGetUniformLocation(progSky->getPID(), "tex");
         // Then bind the uniform samplers to texture units:
         
         glUseProgram(progParticles->getPID());
-        glUniform1i(Tex1Location, 0);
+        glUniform1i(Tex1Location, 1);
         glUseProgram(progSky->getPID());
-        glUniform1i(Tex2Location, 1);
+        glUniform1i(Tex0Location, 0);
         
 //        glEnable(GL_BLEND);
 //        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -515,6 +529,7 @@ public:
         mat4 followTheCam = glm::translate(glm::mat4(1), vec3(-camera->pos.x, 0, -camera->pos.z));
         M = followTheCam * Ry * Rx * makeItBig;
         glFrontFace(GL_CW);
+        glActiveTexture(GL_TEXTURE0);
         progSky->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         skySphere->draw(progSky, true);
         
@@ -524,26 +539,75 @@ public:
         M = glm::translate(mat4(1), vec3(0, 0.0, 0)) * followTheCam * Ry*  Rx * makeItBig;
         progFloor->setMVP(&M[0][0], &V[0][0], &P[0][0]);
         progFloor->setVector3("camPos", camera->pos.x, camera->pos.y, camera->pos.z);
-        glActiveTexture(GL_TEXTURE0);
+        glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, particleTex);
         floor->draw(progFloor, false);
         progFloor->unbind();
         
         glFrontFace(GL_CCW);
         
+        float gravity_diff = 0;
         progParticles->bind();
         glUniformMatrix4fv(progParticles->getUniform("P"), 1, GL_FALSE, &P[0][0]);
 
         mat4 faceTheCam = glm::rotate(glm::mat4(1), camera->rot.y, glm::vec3(0, 1, 0));
 
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, particleTex);
+        glActiveTexture(GL_TEXTURE1);
+        if(switch_particles==0)
+        {
+            glBindTexture(GL_TEXTURE_2D, particleTex);
+            gravity_diff = 0;
+        }
+        else if(switch_particles==1)
+        {
+            glBindTexture(GL_TEXTURE_2D, sparkParticleTex);
+            gravity_diff = 0.02;
+        }
+        
+        progParticles->setInt("switch_particles", switch_particles);
+        
+        static vec2 offset1 = glm::vec2(0.0,0.0);
+        static vec2 offset2 = glm::vec2(0.2,0.0);
+        static float t = 0.0;
+        
+        if(t>=1.0){
+            offset1.x += 0.2;
+            offset2.x +=0.2;
+            if(offset1.x==1.0){
+                offset1.x=0.0;
+                offset1.y += 0.25;
+            }
+            if(offset1.y==1.0){
+                offset1.y=0.0;
+                offset1.x=0.0;
+            }
+            if(offset2.x==1.0){
+                offset2.x=0.0;
+                offset2.y += 0.25;
+            }
+            if(offset2.y==1.0){
+                offset2.y=0.0;
+                offset2.x=0.0;
+            }
+            t=0.0;
+        }
+        else{
+            t += 0.05;
+        }
+        
+        progParticles->setVector2("offset1", &offset1[0]);
+        progParticles->setVector2("offset2", &offset2[0]);
+
+        progParticles->setFloat("t", t);
+
+
         for(int i = 0; i < NUM_PARTICLES; i++)
         {
             float fade = distance(particle_initial_positions[i], particle_positions[i]);
             if(fade < FADE_DISTANCE)
             {
                 particle_positions[i] += transTurbulence(particle_times[i], particle_amplitudes[i]);
+                particle_positions[i].y += gravity_diff;
             }
             else
             {

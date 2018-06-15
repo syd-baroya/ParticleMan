@@ -31,15 +31,15 @@ void main()
     w2 = w2 / sum;
     w3 = w3 / sum;
 
-    vec3 vm0 = vec3(Mw0[3][0], Mw0[3][1], Mw0[3][2]);
-    vec3 vm1 = vec3(Mw1[3][0], Mw1[3][1], Mw1[3][2]);
-    vec3 vm2 = vec3(Mw2[3][0], Mw2[3][1], Mw2[3][2]);
-    vec3 vm3 = vec3(Mw3[3][0], Mw3[3][1], Mw3[3][2]);
-
-    Mw0[3][0] = 0; Mw0[3][1] = 0; Mw0[3][2] = 0;
-    Mw1[3][0] = 0; Mw1[3][1] = 0; Mw1[3][2] = 0;
-    Mw2[3][0] = 0; Mw2[3][1] = 0; Mw2[3][2] = 0;
-    Mw3[3][0] = 0; Mw3[3][1] = 0; Mw3[3][2] = 0;
+//    vec3 vm0 = vec3(Mw0[3][0], Mw0[3][1], Mw0[3][2]);
+//    vec3 vm1 = vec3(Mw1[3][0], Mw1[3][1], Mw1[3][2]);
+//    vec3 vm2 = vec3(Mw2[3][0], Mw2[3][1], Mw2[3][2]);
+//    vec3 vm3 = vec3(Mw3[3][0], Mw3[3][1], Mw3[3][2]);
+//
+//    Mw0[3][0] = 0; Mw0[3][1] = 0; Mw0[3][2] = 0;
+//    Mw1[3][0] = 0; Mw1[3][1] = 0; Mw1[3][2] = 0;
+//    Mw2[3][0] = 0; Mw2[3][1] = 0; Mw2[3][2] = 0;
+//    Mw3[3][0] = 0; Mw3[3][1] = 0; Mw3[3][2] = 0;
     
 //    Mw0[3][0] -= vertPos.x; Mw0[3][1] -= vertPos.y; Mw0[3][2] -= vertPos.z;
 //    Mw1[3][0] -= vertPos.x; Mw1[3][1] -= vertPos.y; Mw1[3][2] -= vertPos.z;
@@ -60,29 +60,29 @@ void main()
 //    vec4 dp2 = (Mw2 * vec4(vertPos, 1.0)) - vec4(vertPos, 1.0);
 //    vec4 dp3 = (Mw3 * vec4(vertPos, 1.0)) - vec4(vertPos, 1.0);
 //    pos = vec4(vertPos, 1.0) + dp0 * w0 + dp1 * w1 + dp2 * w2 + dp3 * w3;
-    pos.xyz = vertPos.xyz + ( (w0 * vm0) +
-                             (w1 * vm1) +
-                             (w2 * vm2) +
-                             (w3 * vm3) );
-
-   pos = vec4(pos.xyz, 1.0) * (w0 * Mw0 + w1 * Mw1 + w2 * Mw2 + w3 * Mw3);
-    
-
-    
-//    pos.x = vertPos.x + ( (w0 * Mw0[3][0]) +
-//                          (w1 * Mw1[3][0]) +
-//                          (w2 * Mw2[3][0]) +
-//                          (w3 * Mw3[3][0]) );
+//    pos.xyz = vertPos.xyz + ( (w0 * vm0) +
+//                             (w1 * vm1) +
+//                             (w2 * vm2) +
+//                             (w3 * vm3) );
 //
-//    pos.y = vertPos.y + ( (w0 * Mw0[3][1]) +
-//                          (w1 * Mw1[3][1]) +
-//                          (w2 * Mw2[3][1]) +
-//                          (w3 * Mw3[3][1]) );
+//   pos = vec4(pos.xyz, 1.0) * (w0 * Mw0 + w1 * Mw1 + w2 * Mw2 + w3 * Mw3);
 //
-//    pos.z = vertPos.z + ( (w0 * Mw0[3][2]) +
-//                          (w1 * Mw1[3][2]) +
-//                          (w2 * Mw2[3][2]) +
-//                          (w3 * Mw3[3][2]) );
+
+    
+    pos.x = vertPos.x + ( (w0 * Mw0[3][0]) +
+                          (w1 * Mw1[3][0]) +
+                          (w2 * Mw2[3][0]) +
+                          (w3 * Mw3[3][0]) );
+
+    pos.y = vertPos.y + ( (w0 * Mw0[3][1]) +
+                          (w1 * Mw1[3][1]) +
+                          (w2 * Mw2[3][1]) +
+                          (w3 * Mw3[3][1]) );
+
+    pos.z = vertPos.z + ( (w0 * Mw0[3][2]) +
+                          (w1 * Mw1[3][2]) +
+                          (w2 * Mw2[3][2]) +
+                          (w3 * Mw3[3][2]) );
 
     gl_Position = P * V * M * vec4(pos.xyz, 1);
     
